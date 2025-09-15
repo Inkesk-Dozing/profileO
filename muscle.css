@@ -1,0 +1,36 @@
+body {
+    background-color: rgb(178, 223, 178);
+}
+.header h1{
+    mix-blend-mode: multiply; /* this makes the image blend with the background */
+    text-shadow: 3px 3px 9px black;/* this makes the text have shadow*/
+    color: wheat;/* this makes the text color*/
+    font-family: cursive;/* this sets the font for text*/
+    background-image: url("./Assets/4958485.jpg");/* this makes the bg image */
+    background-position: vw;/* this sets the image position*/
+    background-repeat: no-repeat;/* this makes the image not repeat itself*/
+    background-size: cover;/* this sets the bg size wrt its height/width*/
+    height: 100px;/* this makes the  height*/
+    display: flex;/* this makes the display to flex grid mode*/
+    align-items: center;/* this makes the aligns vertically in grid*/
+    justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
+    border: 1px solid black;/* this makes the border*/
+}
+
+.About{
+    text-shadow: 2px 2px 5px black;
+    color: whitesmoke;
+    border-bottom-color: aliceblue;
+    text-align: justify;
+    font-family: Arial, sans-serif;
+    font-size: clamp(1rem,1.5vw,2rem); /* this makes the font size responsive*/
+    height: 150px;
+    line-height: 35px; /*this sets the line height*/
+    padding: 20px; /* this sets the padding*/
+    border: 1px solid black;
+    mix-blend-mode: multiply;
+    background-color: cadetblue;
+    width: min(80%,vw); /**this sets the width of the about section to vw that is viewpoint width*/
+}
+
+/* End of file */
