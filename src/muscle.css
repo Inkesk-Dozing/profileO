@@ -6,7 +6,7 @@ body {
     text-shadow: 3px 3px 9px black;/* this makes the text have shadow*/
     color: wheat;/* this makes the text color*/
     font-family: cursive;/* this sets the font for text*/
-    background-image: url("./Assets/4958485.jpg");/* this makes the bg image */
+    background-image: url("/Assets/Header.jpg"); /* try an absolute path */
     background-position: vw;/* this sets the image position*/
     background-repeat: no-repeat;/* this makes the image not repeat itself*/
     background-size: cover;/* this sets the bg size wrt its height/width*/
