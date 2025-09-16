@@ -16,6 +16,13 @@ body {
     justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
     border: 1px solid black;/* this makes the border*/
 }
+.header h1:hover{
+    color: aquamarine; /* this makes the text color change on hover*/
+    text-shadow: 3px 3px 9px black; /* this makes the text shadow on hover*/
+    transform: scale(1.1); /* this makes the text scale on hover*/
+    transition: all 0.3s ease-in-out; /* this makes the transition smooth*/
+    cursor:pointer; /* this makes the cursor a pointer on hover*/
+}
 
 .About{
     text-shadow: 2px 2px 5px black;
@@ -29,7 +36,7 @@ body {
     padding: 20px; /* this sets the padding*/
     border: 1px solid black;
     mix-blend-mode: multiply;
-    background-color: cadetblue;
+    background-color: rgb(14, 30, 31);
     width: min(80%,vw); /**this sets the width of the about section to vw that is viewpoint width*/
 }
 
