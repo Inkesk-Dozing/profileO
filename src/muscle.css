@@ -40,4 +40,87 @@ body {
     width: min(80%,vw); /**this sets the width of the about section to vw that is viewpoint width*/
 }
 
+.Contact-Image {
+  width: 30px; /* sets the width of the image */
+  height: 30px; /* sets the height of the image */
+  border-radius: 50%; /* makes the image circular */
+  object-fit: cover; /* ensures the image fills the circle */
+  border: 3px solid black; /* adds a border */
+  box-shadow: 3px 3px 9px black; /* adds a shadow */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* smooth transitions */
+
+  /* Fade-in on page load */
+  opacity: 0;
+  animation: fadeIn 1s ease forwards, glitch 1.5s infinite,hackerGlitch 2s infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+/* Hacker-style glitch */
+@keyframes hackerGlitch {
+  0% { transform: translate(0); filter: none; }
+  10% { transform: translate(-1px, 1px) skewX(5deg); filter: hue-rotate(20deg); }
+  20% { transform: translate(1px, -1px) skewY(5deg); filter: hue-rotate(-20deg); }
+  30% { transform: translate(-2px, 2px) skewX(-5deg); filter: contrast(200%); }
+  40% { transform: translate(2px, -2px) skewY(-5deg); filter: brightness(150%); }
+  50% { transform: translate(0); filter: none; }
+  100% { transform: translate(0); filter: none; }
+}
+
+.Contact-Image:hover {
+  transform: scale(1.2); /* scales the image on hover */
+  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* adds a glow effect on hover */
+  cursor: pointer; /* changes cursor to pointer on hover */
+}
+
+
+
+
+
+.Circle-Image:hover{
+    transform: scale(1.2); /* this makes the image scale on hover*/
+    cursor: pointer; /* this makes the cursor a pointer on hover*/
+    box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow of the image on hover*/
+}
+
+.Row-grid{
+    
+    display: flex;
+    gap: 9px;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: min(80%,vw); /* this sets the width of the grid to vw*/
+    border: 1px solid black; /* this makes the border*/
+    background-color: rgb(215, 239, 240); /* this sets the background color*/
+    mix-blend-mode: multiply; /* this makes the image blend with the background*/
+    box-shadow: 3px 3px 9px black; /* this makes the shadow of the grid*/
+}
+
+
 /* End of file */
