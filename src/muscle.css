@@ -52,7 +52,7 @@ body {
 
   /* Fade-in on page load */
   opacity: 0;
-  animation: fadeIn 1s ease forwards, glitch 1.5s infinite,hackerGlitch 2s infinite;
+  animation: fadeIn 1s ease forwards, corruptGlitch 1.5s infinite,hackerGlitch 2s infinite;
   animation-delay: 0.3s;
 }
 
@@ -62,6 +62,7 @@ body {
   }
 }
 
+/*
 @keyframes glitch {
   0% {
     transform: translate(0);
@@ -81,7 +82,41 @@ body {
   100% {
     transform: translate(0);
   }
+} 
+*/
+
+/* Corrupted hacker-style animation */
+@keyframes corruptGlitch {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: none;
+  }
+  10% {
+    transform: scale(1.05) rotate(2deg);
+    filter: grayscale(100%) blur(1px);
+  }
+  20% {
+    transform: scale(0.95) rotate(-2deg);
+    filter: invert(100%) brightness(120%);
+  }
+  30% {
+    transform: scale(1.1) rotate(1deg);
+    filter: hue-rotate(90deg) contrast(250%);
+  }
+  40% {
+    transform: scale(0.9) rotate(-1deg);
+    filter: sepia(80%) saturate(200%);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+    filter: none;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: none;
+  }
 }
+
 /* Hacker-style glitch */
 @keyframes hackerGlitch {
   0% { transform: translate(0); filter: none; }
