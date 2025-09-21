@@ -136,91 +136,47 @@ body {
 
 
 .Contact-Image {
-  width: 30px; /* sets the width of the image */
-  height: 30px; /* sets the height of the image */
-  border-radius: 50%; /* makes the image circular */
-  object-fit: cover; /* ensures the image fills the circle */
-  border: 3px solid black; /* adds a border */
-  box-shadow: 3px 3px 9px black; /* adds a shadow */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #222;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-  transition: all 0.3s ease-in-out; /* smooth transitions */
-
-  /* Fade-in on page load */
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
   opacity: 0;
-  animation: fadeIn 1s ease forwards, corruptGlitch 1.5s infinite,hackerGlitch 2s infinite;
+  animation: fadeIn 0.8s ease forwards, pulseGlow 3s ease-in-out infinite;
   animation-delay: 0.3s;
 }
 
+/* Fade-in on page load */
 @keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
 }
 
-/*
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(2px, -2px);
-  }
-  60% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(2px, 2px);
-  }
-  100% {
-    transform: translate(0);
-  }
-} 
-*/
-
-/* Corrupted hacker-style animation */
-@keyframes corruptGlitch {
-  0% {
-    transform: scale(1) rotate(0deg);
-    filter: none;
-  }
-  10% {
-    transform: scale(1.05) rotate(2deg);
-    filter: grayscale(100%) blur(1px);
-  }
-  20% {
-    transform: scale(0.95) rotate(-2deg);
-    filter: invert(100%) brightness(120%);
-  }
-  30% {
-    transform: scale(1.1) rotate(1deg);
-    filter: hue-rotate(90deg) contrast(250%);
-  }
-  40% {
-    transform: scale(0.9) rotate(-1deg);
-    filter: sepia(80%) saturate(200%);
+/* Subtle pulsing glow */
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
   }
   50% {
-    transform: scale(1) rotate(0deg);
-    filter: none;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    filter: none;
+    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
   }
 }
 
-/* Hacker-style glitch */
-@keyframes hackerGlitch {
-  0% { transform: translate(0); filter: none; }
-  10% { transform: translate(-1px, 1px) skewX(5deg); filter: hue-rotate(20deg); }
-  20% { transform: translate(1px, -1px) skewY(5deg); filter: hue-rotate(-20deg); }
-  30% { transform: translate(-2px, 2px) skewX(-5deg); filter: contrast(200%); }
-  40% { transform: translate(2px, -2px) skewY(-5deg); filter: brightness(150%); }
-  50% { transform: translate(0); filter: none; }
-  100% { transform: translate(0); filter: none; }
+/* Hover effect: scale + color shift */
+.Contact-Image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 14px rgba(0, 255, 255, 0.4);
+  filter: brightness(120%) contrast(110%) hue-rotate(10deg);
+}
+
+/* Hover effect: subtle scale + glow */
+.Contact-Image:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
+  filter: brightness(120%) contrast(110%);
 }
 
 .Contact-Image-:hover {
@@ -228,6 +184,34 @@ body {
   box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* adds a glow effect on hover */
   cursor: pointer; /* changes cursor to pointer on hover */
 }
+
+.Tooltip-container {
+  position: relative;
+  display: inline-block;
+}
+
+.Tooltip-text {
+  visibility: hidden;
+  opacity: 0;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  bottom: 110%; /* slightly above the image */
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.Tooltip-container:hover .hover-text {
+  visibility: visible;
+  opacity: 1;
+}
+
 
 .Row-grid{
     
@@ -241,7 +225,6 @@ body {
     mix-blend-mode: multiply; /* this makes the image blend with the background*/
     box-shadow: 3px 3px 9px black; /* this makes the shadow of the grid*/
 }
-
 
 /* Not Used Yet */
 .Circle-Image:hover{
