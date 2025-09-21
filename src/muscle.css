@@ -40,6 +40,101 @@ body {
     width: min(80%,vw); /**this sets the width of the about section to vw that is viewpoint width*/
 }
 
+.Contact-Image-Circle {
+  width: 30px; /* sets the width of the image */
+  height: 30px; /* sets the height of the image */
+  border-radius: 50%; /* makes the image circular */
+  object-fit: cover; /* ensures the image fills the circle */
+  border: 3px solid black; /* adds a border */
+  box-shadow: 3px 3px 9px black; /* adds a shadow */
+  cursor: pointer;
+  transition: all 0.3s ease-in-out; /* smooth transitions */
+
+  /* Fade-in on page load */
+  opacity: 0;
+  animation: fadeIn 1s ease forwards, corruptGlitch 1.5s infinite,hackerGlitch 2s infinite;
+  animation-delay: 0.3s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/*
+@keyframes glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-2px, 2px);
+  }
+  40% {
+    transform: translate(2px, -2px);
+  }
+  60% {
+    transform: translate(-2px, -2px);
+  }
+  80% {
+    transform: translate(2px, 2px);
+  }
+  100% {
+    transform: translate(0);
+  }
+} 
+*/
+
+/* Corrupted hacker-style animation */
+@keyframes corruptGlitch {
+  0% {
+    transform: scale(1) rotate(0deg);
+    filter: none;
+  }
+  10% {
+    transform: scale(1.05) rotate(2deg);
+    filter: grayscale(100%) blur(1px);
+  }
+  20% {
+    transform: scale(0.95) rotate(-2deg);
+    filter: invert(100%) brightness(120%);
+  }
+  30% {
+    transform: scale(1.1) rotate(1deg);
+    filter: hue-rotate(90deg) contrast(250%);
+  }
+  40% {
+    transform: scale(0.9) rotate(-1deg);
+    filter: sepia(80%) saturate(200%);
+  }
+  50% {
+    transform: scale(1) rotate(0deg);
+    filter: none;
+  }
+  100% {
+    transform: scale(1) rotate(0deg);
+    filter: none;
+  }
+}
+
+/* Hacker-style glitch */
+@keyframes hackerGlitch {
+  0% { transform: translate(0); filter: none; }
+  10% { transform: translate(-1px, 1px) skewX(5deg); filter: hue-rotate(20deg); }
+  20% { transform: translate(1px, -1px) skewY(5deg); filter: hue-rotate(-20deg); }
+  30% { transform: translate(-2px, 2px) skewX(-5deg); filter: contrast(200%); }
+  40% { transform: translate(2px, -2px) skewY(-5deg); filter: brightness(150%); }
+  50% { transform: translate(0); filter: none; }
+  100% { transform: translate(0); filter: none; }
+}
+
+.Contact-Image-Circle:hover {
+  transform: scale(1.2); /* scales the image on hover */
+  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* adds a glow effect on hover */
+  cursor: pointer; /* changes cursor to pointer on hover */
+}
+
+
 .Contact-Image {
   width: 30px; /* sets the width of the image */
   height: 30px; /* sets the height of the image */
@@ -128,20 +223,10 @@ body {
   100% { transform: translate(0); filter: none; }
 }
 
-.Contact-Image:hover {
+.Contact-Image-:hover {
   transform: scale(1.2); /* scales the image on hover */
   box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* adds a glow effect on hover */
   cursor: pointer; /* changes cursor to pointer on hover */
-}
-
-
-
-
-
-.Circle-Image:hover{
-    transform: scale(1.2); /* this makes the image scale on hover*/
-    cursor: pointer; /* this makes the cursor a pointer on hover*/
-    box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow of the image on hover*/
 }
 
 .Row-grid{
@@ -157,5 +242,12 @@ body {
     box-shadow: 3px 3px 9px black; /* this makes the shadow of the grid*/
 }
 
+
+/* Not Used Yet */
+.Circle-Image:hover{
+    transform: scale(1.2); /* this makes the image scale on hover*/
+    cursor: pointer; /* this makes the cursor a pointer on hover*/
+    box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow of the image on hover*/
+}
 
 /* End of file */
