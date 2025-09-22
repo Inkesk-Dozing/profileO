@@ -1,6 +1,9 @@
 body {
     background-color: rgb(178, 223, 178);
 }
+
+/*HEADER*/
+
 .header h1{
     mix-blend-mode: multiply; /* this makes the image blend with the background */
     text-shadow: 3px 3px 9px black;/* this makes the text have shadow*/
@@ -23,6 +26,56 @@ body {
     transition: all 0.3s ease-in-out; /* this makes the transition smooth*/
     cursor:pointer; /* this makes the cursor a pointer on hover*/
 }
+
+/*NAVBAR*/
+
+.Navbar {
+    display: flex;
+    justify-content: center; /* centers the navbar items horizontally */
+    align-items: center; /* centers the navbar items vertically */
+    background-color: #111; /* dark background color */
+    padding: 10px 0; /* vertical padding */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* subtle shadow for depth */
+}
+
+/*SEARCHBAR*/
+
+.Searchbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px auto;
+  width: 300px;
+  background-color: #111;
+  border-radius: 8px;
+  padding: 6px;
+  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+}
+
+.Searchbar input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px 0 0 6px;
+  background-color: #222;
+  color: #fff;
+  font-family: 'Georgia', serif;
+}
+
+.Searchbar button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  background-color: #00ffff;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.Searchbar button:hover {
+  background-color: #00cccc;
+}
+
 
 .About{
     text-shadow: 2px 2px 5px black;
