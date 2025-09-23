@@ -1,8 +1,88 @@
-
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; URL='skeleton.html'" />
-  </head>
-  <body></body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Skeleton</title>
+    <link rel="stylesheet" href="/src/muscle.css" ; alt="Good Hai" style="width: 300px; height: auto; border: 1px solid black;">
+</head>
+
+<body>
+    <div class="Navbar">
+        <a href="#Home"><img src="/Assets/Home.webp" class="Contact-Image"></a>
+        <a href="#About">About Me</a>
+        <a href="#Form">Form</a>
+        <a href="#Contact"><img src="/Assets/Contact.png" class="Contact-Image"> Me</a>
+        
+        <div class="Searchbar">
+            <input type="text" id="searchInput" placeholder="Search Fragments...">
+            <button type="submit">🔍</button>
+        </div>
+
+    </div>
+    <br>
+    <div class="header">
+        <h1><strong> <a href="https://www.google.com" target="_blank">Welcome To My Profile </strong></a></h1>
+        
+    </div>
+    <div class="About">
+        <p> Hello, my name is Harsh Dev Jha. I am a Student in CSE Core with a passion for everything i can literally get hands-on. I have 1 of experience in Python Beginner level and have worked on various projects that have helped me develop my skills and expertise.</p>
+    </div>
+    <br>
+    <div class="Form">
+
+        <form action="" method="post">
+
+            <label for="Name">Name:</label><br>
+            <input type='text' id="Name" name="Name" required><br><br>
+
+            <label for="Email">Email:</label><br>
+            <input type='email' id="Email" name="Email" required><br><br>
+
+            <label for="Message">Message:</label><br>
+            <textarea id="Message" name="Message" rows="4" cols="50" required></textarea><br><br>
+
+            <input type="Submit" value="Submit"><br><br>
+            <input type="Reset" value="Reset"><br><br>
+            <input type="Button" value="Go to Google" onclick="window.location.href=''",target="_blank">
+            
+            <input
+
+            <br><br>
+        </form>
+
+    
+    </div>
+    
+    <div class="Contact">
+
+        <div class="Tooltip-Container">
+
+            <div class="Row-grid">
+
+                <h2> Contact Me</h2>
+
+                <p id="Github"><img src="/Assets/github.png" class ='Contact-Image-Circle' width="50px" alt="GitHub Icon" target="_blank" onclick="window.open('https://www.github.com/Inkesk-Dozing/','_blank')" title="Github">  </p>
+
+                <!-- cant use target='_blank' in onclick , only works in <a> tag , instead use it this way--->
+
+                <p id="LinkedIn"><img src="/Assets/linkedin.png" class ='Contact-Image-Circle' width="50px" alt="LinkedIn Icon" target="_blank" onclick="window.open('https://www.linkedin.com/in/harsh-dev-jha-primus/', '_blank')" title="LinkedIn">  </p>
+                
+                <p id="Instagram"><img src="/Assets/instagram.webp" class ='Contact-Image-Circle' width="50px" alt="Instagram Icon" target="_blank" onclick="window.open('https://instagram.com/uff_thedifficulty/', '_blank')" title="Instagram" >  </p>
+
+                <p id="Email"><img src="/Assets/Email.jpg" class ='Contact-Image-Circle' width="50px" alt="Email Icon" target="_blank" onclick="window.open('mailto:devvindj@gmail.com')" title="Send Email">  </p>       
+
+                <p id="Portfolio"><img src="/Assets/portfolio.png" class ='Contact-Image-Circle' width="50px" alt="Portfolio Icon" target="_blank" onclick="window.location.href=''" title="Portfolio" >  </p>
+
+                <p id="Resume" ><img src="/Assets/resume.webp" class ='Contact-Image' width="30px" alt="Resume Icon" target="_blank" onclick="window.location.href=''" title="Resume">  </p>
+                
+                <br>
+            </div>
+           
+        </div>
+
+    </div>
+    <script src="/src/skin.js"></script>
+</body>
+
 </html>
