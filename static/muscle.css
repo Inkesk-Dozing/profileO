@@ -5,8 +5,9 @@ body {
 /*Fixed*/
 
 .fixed{
+  width:1450px;
   position: fixed;
-  top: 20px;         /* distance from top */
+  bottom: 20px;         /* distance from top */
   right: 20px;       /* distance from right */
   background-color: #f9f9f9;
   padding: 10px 15px;
@@ -56,6 +57,15 @@ nav{
   background-color: #111; /* dark background color */
   padding: 10px 0; /* vertical padding */
   box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* subtle shadow for depth */
+  width:1450px;
+
+  position: fixed;
+  top: 20px;         /* distance from top */
+  right: 20px;       /* distance from right */
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;     /* ensures it stays above other content */
 }
 
 /*SEARCHBAR*/
