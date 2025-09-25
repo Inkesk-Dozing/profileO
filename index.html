@@ -3,33 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile Skeleton</title>
-    <link rel="stylesheet" href="static/muscle.css" ; alt="Good Hai" style="width: 300px; height: auto; border: 1px solid black;">
+    <title>HDJ - Profile Inkesk Skeleton</title>
+    <link rel="stylesheet" href="static/muscle.css" ; alt="Css Doc" style="width: 300px; height: auto; border: 1px solid black;">
 </head>
 
 <body>
-    <div class="Navbar">
-        <a href="#Home"><img src="static/Assets/Home.webp" class="Contact-Image"></a>
-        <a href="#About">About Me</a>
-        <a href="#Form">Form</a>
-        <a href="#Contact"><img src="static/Assets/Contact.png" class="Contact-Image"> Me</a>
-        
-        <div class="Searchbar">
-            <input type="text" id="searchInput" placeholder="Search Fragments...">
-            <button type="submit">🔍</button>
-        </div>
-
+    <div class="fixed">
+        <nav class="Navbar">
+            <a href="#Home"><img src="static/Assets/Home.webp" class="Contact-Image"></a>
+            <a href="#About">About ME</a>
+            <a href="#Form">Form</a>
+            <a href="#Contact"><img src="static/Assets/Contact.png" class="Contact-Image"></a>
+            
+            <div class="Searchbar">
+                <input type="text" id="searchInput" placeholder="Search Fragments...">
+                <button type="submit">🔍</button>
+            </div>
+        </nav>
     </div>
+
     <br>
+
     <div class="header">
         <h1><strong> <a href="https://www.google.com" target="_blank">Welcome To My Profile </strong></a></h1>
         
     </div>
-    <div class="About">
-        <p> Hello, my name is Harsh Dev Jha. I am a Student in CSE Core with a passion for everything i can literally get hands-on. I have 1 of experience in Python Beginner level and have worked on various projects that have helped me develop my skills and expertise.</p>
-    </div>
+
+    <section id="About" class="About">
+        <h2>About Me</h2>
+        <img class="profile-image" src="image1.jpg" alt="Harsh Dev Jha" onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/333?text=Image';">
+
+        <Main>
+        <p> Hello, my name is Harsh Dev Jha. I am a Student in CSE Core with a passion for everything I can literally get hands-on. I have 1 of experience in Python Beginner level and have worked on various projects that have helped me develop my skills and expertise.Currently I amd developing my HTML|CSS skills.</p>
+        </Main>
+
+    </section>
+
     <br>
-    <div class="Form">
+    
+    <aside id="Form" class="Form">
 
         <form action="" method="post">
 
@@ -50,38 +62,43 @@
 
             <br><br>
         </form>
-
     
-    </div>
+    </aside>
     
-    <div class="Contact">
+    <div class="fixed"></div>
+        <section id="Contact" class="Contact">
 
-        <div class="Tooltip-Container">
+            <div class="Tooltip-Container">
 
-            <div class="Row-grid">
+                <div class="Row-grid">
 
-                <h2> Contact Me</h2>
+                    <h2> Contact Me</h2>
 
-                <p id="Github"><img src="static/Assets/github.png" class ='Contact-Image-Circle' width="50px" alt="GitHub Icon" target="_blank" onclick="window.open('https://www.github.com/Inkesk-Dozing/','_blank')" title="Github">  </p>
+                    <p id="Github"><img src="static/Assets/github.png" class ='Contact-Image-Circle' width="50px" alt="GitHub Icon" target="_blank" onclick="window.open('https://www.github.com/Inkesk-Dozing/','_blank')" title="Github">  </p>
 
-                <!-- cant use target='_blank' in onclick , only works in <a> tag , instead use it this way--->
+                    <!-- cant use target='_blank' in onclick , only works in <a> tag , instead use it this way--->
 
-                <p id="LinkedIn"><img src="static/Assets/linkedin.png" class ='Contact-Image-Circle' width="50px" alt="LinkedIn Icon" target="_blank" onclick="window.open('https://www.linkedin.com/in/harsh-dev-jha-primus/', '_blank')" title="LinkedIn">  </p>
-                
-                <p id="Instagram"><img src="static/Assets/instagram.webp" class ='Contact-Image-Circle' width="50px" alt="Instagram Icon" target="_blank" onclick="window.open('https://instagram.com/uff_thedifficulty/', '_blank')" title="Instagram" >  </p>
+                    <p id="LinkedIn"><img src="static/Assets/linkedin.png" class ='Contact-Image-Circle' width="50px" alt="LinkedIn Icon" target="_blank" onclick="window.open('https://www.linkedin.com/in/harsh-dev-jha-primus/', '_blank')" title="LinkedIn">  </p>
+                    
+                    <p id="Instagram"><img src="static/Assets/instagram.webp" class ='Contact-Image-Circle' width="50px" alt="Instagram Icon" target="_blank" onclick="window.open('https://instagram.com/uff_thedifficulty/', '_blank')" title="Instagram" >  </p>
 
-                <p id="Email"><img src="static/Assets/Email.jpg" class ='Contact-Image-Circle' width="50px" alt="Email Icon" target="_blank" onclick="window.open('mailto:devvindj@gmail.com')" title="Send Email">  </p>       
+                    <p id="Email"><img src="static/Assets/Email.jpg" class ='Contact-Image-Circle' width="50px" alt="Email Icon" target="_blank" onclick="window.open('mailto:devvindj@gmail.com')" title="Send Email">  </p>       
 
-                <p id="Portfolio"><img src="static/Assets/portfolio.png" class ='Contact-Image-Circle' width="50px" alt="Portfolio Icon" target="_blank" onclick="window.location.href=''" title="Portfolio" >  </p>
+                    <p id="Portfolio"><img src="static/Assets/portfolio.png" class ='Contact-Image-Circle' width="50px" alt="Portfolio Icon" target="_blank" onclick="window.location.href=''" title="Portfolio" >  </p>
 
-                <p id="Resume" ><img src="static/Assets/resume.webp" class ='Contact-Image' width="30px" alt="Resume Icon" target="_blank" onclick="window.location.href=''" title="Resume">  </p>
-                
-                <br>
+                    <p id="Resume" ><img src="static/Assets/resume.webp" class ='Contact-Image' width="30px" alt="Resume Icon" target="_blank" onclick="window.location.href=''" title="Resume">  </p>
+                    
+                    <br>
+                </div>
             </div>
-           
-        </div>
-
+        </section>
+    
+    <footer class="footer">
+    <p>&copy; 2025 Harsh Dev Jha. All rights reserved.</p>
+    </footer>
+    
     </div>
+
     <script src="static/skin.js"></script>
 </body>
 

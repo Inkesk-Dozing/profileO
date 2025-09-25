@@ -1,41 +1,62 @@
 body {
-    background-color: rgb(178, 223, 178);
+  background-color: rgb(178, 223, 178);
 }
+
+/*Fixed*/
+
+.fixed{
+  position: fixed;
+  top: 20px;         /* distance from top */
+  right: 20px;       /* distance from right */
+  background-color: #f9f9f9;
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1000;     /* ensures it stays above other content */
+}
+}
+
 
 /*HEADER*/
 
 .header h1{
-    mix-blend-mode: multiply; /* this makes the image blend with the background */
-    text-shadow: 3px 3px 9px black;/* this makes the text have shadow*/
-    color: wheat;/* this makes the text color*/
-    font-family: cursive;/* this sets the font for text*/
-    background-image: url("/Assets/Header.jpg"); /* try an absolute path */
-    background-position: vw;/* this sets the image position*/
-    background-repeat: no-repeat;/* this makes the image not repeat itself*/
-    background-size: cover;/* this sets the bg size wrt its height/width*/
-    height: 100px;/* this makes the  height*/
-    display: flex;/* this makes the display to flex grid mode*/
-    align-items: center;/* this makes the aligns vertically in grid*/
-    justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
-    border: 1px solid black;/* this makes the border*/
+  mix-blend-mode: multiply; /* this makes the image blend with the background */
+  text-shadow: 3px 3px 9px black;/* this makes the text have shadow*/
+  color: wheat;/* this makes the text color*/
+  font-family: cursive;/* this sets the font for text*/
+  background-image: url("/Assets/Header.jpg"); /* try an absolute path */
+  background-position: vw;/* this sets the image position*/
+  background-repeat: no-repeat;/* this makes the image not repeat itself*/
+  background-size: cover;/* this sets the bg size wrt its height/width*/
+  height: 100px;/* this makes the  height*/
+  display: flex;/* this makes the display to flex grid mode*/
+  align-items: center;/* this makes the aligns vertically in grid*/
+  border: 1px solid black;/* this makes the border*/
+  justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
 }
 .header h1:hover{
-    color: aquamarine; /* this makes the text color change on hover*/
-    text-shadow: 3px 3px 9px black; /* this makes the text shadow on hover*/
-    transform: scale(1.1); /* this makes the text scale on hover*/
-    transition: all 0.3s ease-in-out; /* this makes the transition smooth*/
-    cursor:pointer; /* this makes the cursor a pointer on hover*/
+  color: aquamarine; /* this makes the text color change on hover*/
+  text-shadow: 3px 3px 9px black; /* this makes the text shadow on hover*/
+  transform: scale(1.1); /* this makes the text scale on hover*/
+  transition: all 0.3s ease-in-out; /* this makes the transition smooth*/
+  cursor:pointer; /* this makes the cursor a pointer on hover*/
 }
 
 /*NAVBAR*/
 
+nav{
+  display:flex;
+  gap:20px;
+}
+
+
 .Navbar {
-    display: flex;
-    justify-content: center; /* centers the navbar items horizontally */
-    align-items: center; /* centers the navbar items vertically */
-    background-color: #111; /* dark background color */
-    padding: 10px 0; /* vertical padding */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* subtle shadow for depth */
+  display: flex;
+  justify-content: center; /* centers the navbar items horizontally */
+  align-items: center; /* centers the navbar items vertically */
+  background-color: #111; /* dark background color */
+  padding: 10px 0; /* vertical padding */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* subtle shadow for depth */
 }
 
 /*SEARCHBAR*/
@@ -77,21 +98,29 @@ body {
 }
 
 
+/*About*/
+
 .About{
-    text-shadow: 2px 2px 5px black;
-    color: whitesmoke;
-    border-bottom-color: aliceblue;
-    text-align: justify;
-    font-family: Arial, sans-serif;
-    font-size: clamp(1rem,1.5vw,2rem); /* this makes the font size responsive*/
-    height: 150px;
-    line-height: 35px; /*this sets the line height*/
-    padding: 20px; /* this sets the padding*/
-    border: 1px solid black;
-    mix-blend-mode: multiply;
-    background-color: rgb(14, 30, 31);
-    width: min(80%,vw); /**this sets the width of the about section to vw that is viewpoint width*/
+  text-shadow: 2px 2px 5px black;
+  color: whitesmoke;
+  border-bottom-color: aliceblue;
+  text-align: justify;
+  font-family: Arial, sans-serif;
+  font-size: clamp(1rem,1.5vw,2rem); /* this makes the font size responsive*/
+  height: 150px;
+  line-height: 35px; /*this sets the line height*/
+  padding: 20px; /* this sets the padding*/
+  border: 1px solid black;
+  mix-blend-mode: multiply;
+  background-color: rgb(14, 30, 31);
+  width: min(80%,vw); /**this sets the width of the about section to vw that is viewpoint width*/
+  overflow: hidden;      /* hides overflow */
+  overflow: scroll;      /* adds scrollbars */
+  overflow: auto;        /* scrollbars only if needed */
+
 }
+
+/*Contact*/
 
 .Contact-Image-Circle {
   width: 30px; /* sets the width of the image */
@@ -218,25 +247,13 @@ body {
   }
 }
 
-/* Hover effect: scale + color shift */
+/* Hover effect */
 .Contact-Image:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 14px rgba(0, 255, 255, 0.4);
-  filter: brightness(120%) contrast(110%) hue-rotate(10deg);
-}
-
-/* Hover effect: subtle scale + glow */
-.Contact-Image:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 12px rgba(255, 255, 255, 0.3);
-  filter: brightness(120%) contrast(110%);
-}
-
-.Contact-Image-:hover {
   transform: scale(1.2); /* scales the image on hover */
-  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* adds a glow effect on hover */
+  box-shadow: 3px 3px 9px black, 0 0 10px 5px rgb(23, 10, 209); /* adds a glow effect on hover */
   cursor: pointer; /* changes cursor to pointer on hover */
 }
+
 
 .Tooltip-container {
   position: relative;
@@ -268,22 +285,28 @@ body {
 
 .Row-grid{
     
-    display: flex;
-    gap: 9px;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: min(80%,vw); /* this sets the width of the grid to vw*/
-    border: 1px solid black; /* this makes the border*/
-    background-color: rgb(215, 239, 240); /* this sets the background color*/
-    mix-blend-mode: multiply; /* this makes the image blend with the background*/
-    box-shadow: 3px 3px 9px black; /* this makes the shadow of the grid*/
+  display: flex;
+  gap: 9px;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: min(80%,vw); /* this sets the width of the grid to vw*/
+  border: 1px solid black; /* this makes the border*/
+  background-color: rgb(215, 239, 240); /* this sets the background color*/
+  mix-blend-mode: multiply; /* this makes the image blend with the background*/
+  box-shadow: 3px 3px 9px black; /* this makes the shadow of the grid*/
 }
 
 /* Not Used Yet */
 .Circle-Image:hover{
-    transform: scale(1.2); /* this makes the image scale on hover*/
-    cursor: pointer; /* this makes the cursor a pointer on hover*/
-    box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow of the image on hover*/
+  transform: scale(1.2); /* this makes the image scale on hover*/
+  cursor: pointer; /* this makes the cursor a pointer on hover*/
+  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow ofthe image on hover*/
+}
+
+.footer{
+  display: flex;/* this makes the display to flex grid mode*/
+  align-items: center;/* this makes the aligns vertically in grid*/
+  justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
 }
 
 /* End of file */
