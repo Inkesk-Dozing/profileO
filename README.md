@@ -6,6 +6,8 @@
 Created by Inkesk<br>
 Powered by OSKA<br>
 Under ØSKA<br></p>
+<div align="center"><strong>.</strong></div>
+<br>
 
 
 
