@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HDJ - Portfolio Inkesk Skeleton</title>
-    <link rel="stylesheet" href="static/muscle.css">
+    <link rel="stylesheet" href="">
 </head>
 
 <body>
@@ -13,13 +13,15 @@
     </header>
 
     <nav class="Navbar">
-        <a href="#Home"><img src="static/Assets/Home.jpeg" class="Contact-Image"></a>
-        <a href="#About">About-me</a>
-        <a href="#Projects">Projects</a>
-        <a href="#Form">Form</a>
-        <a href="#Contact"><img src="static/Assets/Contact.jpeg" class="Contact-Image"></a>
-        <a href="#Main">Skip To Main Content</a>
-        
+        <ul>
+            <li><a href="#Home"><img src="static/Assets/Home.jpeg" class="Contact-Image"></a></li>
+            <li><a href="#About">About-me</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Form">Form</a></li>
+            <li><a href="#Contact"><img src="static/Assets/Contact.jpeg" class="Contact-Image"></a></li>
+            <li><a href="#Main">Skip To Main Content</a></li>
+        </ul>
+
         <div class="Searchbar">
             <input type="text" id="searchInput" placeholder="Search the Site...">
             <button type="submit">🔍</button>
@@ -90,10 +92,10 @@
         <form action="" method="post">
 
             <label for="Name">Name:</label><br>
-            <input type='text' id="Name" name="Name" required><br><br>
+            <input type='text' id="Name" name="Name" required placeholder="Enter Your Name"><br><br>
 
             <label for="Email">Email:</label><br>
-            <input type='email' id="Email" name="Email" required><br><br>
+            <input type='email' id="Email" name="Email" required placeholder="Enter Your Email"><br><br>
 
             <label for="Message">Message:</label><br>
             <textarea id="Message" name="Message" rows="4" cols="50" placeholder="Leave a Message For me ... 👋" required></textarea>
