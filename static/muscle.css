@@ -36,12 +36,26 @@ hr{
 table {
   background-color:#f9f9f9;
   margin: 0 auto;
-  width: auto;
+  width: 500px;
 }
 th, td {
   padding: 10px;
   text-align: center;
 }
+
+table th {
+  background-color: #f2f2f2; /* your chosen header color */
+  color: black;
+  font-weight: bold;
+}
+
+table tr:nth-child(even) {
+  background-color: #f2f2f2; /* light shade for even rows */
+}
+table tr:nth-child(odd) {
+  background-color: rgb(211, 237, 238); /* white for odd rows */
+}
+
 
 /*HEADER*/
 
@@ -61,6 +75,7 @@ th, td {
   border: 1px solid black;/* this makes the border*/
   justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
 }
+
 .header h1:hover{
   color: aquamarine; /* this makes the text color change on hover*/
   text-shadow: 3px 3px 9px black; /* this makes the text shadow on hover*/
@@ -81,7 +96,7 @@ nav{
   display: flex;
   justify-content: center; /* centers the navbar items horizontally */
   align-items: center; /* centers the navbar items vertically */
-  background-color: #111; /* dark background color */
+  background-color: rgb(211, 237, 238); /* dark background color */
   padding: 10px 0; /* vertical padding */
   box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* subtle shadow for depth */
   width:1000px;
@@ -134,7 +149,7 @@ nav{
 
 .About{
   text-shadow: 2px 2px 5px black;
-  color: whitesmoke;
+  color: black;
   border-bottom-color: aliceblue;
   text-align: justify;
   font-family: Arial, sans-serif;
@@ -144,7 +159,7 @@ nav{
   padding: 20px; /* this sets the padding*/
   border: 1px solid black;
   mix-blend-mode: multiply;
-  background-color: rgb(14, 30, 31);
+  background-color: rgb(211, 237, 238);
   width:1000px;
   overflow: hidden;      /* hides overflow */
   overflow: scroll;      /* adds scrollbars */
