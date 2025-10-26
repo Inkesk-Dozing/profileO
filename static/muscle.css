@@ -1,21 +1,47 @@
-body {
+
+/* Body */
+body{
   background-color: rgb(178, 223, 178);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
-/*Fixed*/
+/* Section separators */
+hr{
+  border: none;
+  border-top: 2px solid #010101;
+  margin: 20px auto 20px auto;
+  width: 1000px;                  /* Center and limit width of hr */
+}
 
-.fixed{
-  width:1450px;
+/*sticky*/
+
+.back-to-top{
   position: fixed;
-  bottom: 20px;         /* distance from top */
-  right: 20px;       /* distance from right */
-  background-color: #f9f9f9;
-  padding: 10px 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  z-index: 1000;     /* ensures it stays above other content */
+  bottom:10px;
+  right:30px;
+  margin:auto;
+  width: 145px;
+  background-color: rgba(233, 226, 226, 0.7);
+  padding: 10px 0;
+  box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
+  z-index: inherit;
 }
 
+/*Table*/
+
+table {
+  background-color:#f9f9f9;
+  margin: 0 auto;
+  width: auto;
+}
+th, td {
+  padding: 10px;
+  text-align: center;
+}
 
 /*HEADER*/
 
@@ -24,11 +50,12 @@ body {
   text-shadow: 3px 3px 9px black;/* this makes the text have shadow*/
   color: wheat;/* this makes the text color*/
   font-family: cursive;/* this sets the font for text*/
-  background-image: url("/Assets/Header.jpg"); /* try an absolute path */
+  background-image: url("./Assets/Header.jpg"); /* try an absolute path */
   background-position: vw;/* this sets the image position*/
   background-repeat: no-repeat;/* this makes the image not repeat itself*/
-  background-size: cover;/* this sets the bg size wrt its height/width*/
+  background-size:cover;/* this sets the bg size wrt its height/width*/
   height: 100px;/* this makes the  height*/
+  width:1000px;/* this makes the width*/
   display: flex;/* this makes the display to flex grid mode*/
   align-items: center;/* this makes the aligns vertically in grid*/
   border: 1px solid black;/* this makes the border*/
@@ -46,7 +73,7 @@ body {
 
 nav{
   display:flex;
-  gap:20px;
+  gap:10px;
 }
 
 
@@ -57,15 +84,11 @@ nav{
   background-color: #111; /* dark background color */
   padding: 10px 0; /* vertical padding */
   box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* subtle shadow for depth */
-  width:1450px;
-
-  position: fixed;
-  top: 20px;         /* distance from top */
-  right: 20px;       /* distance from right */
-  padding: 10px 15px;
+  width:1000px;
+  height:100px;
   border: 1px solid #ccc;
   border-radius: 5px;
-  z-index: 1000;     /* ensures it stays above other content */
+
 }
 
 /*SEARCHBAR*/
@@ -122,7 +145,7 @@ nav{
   border: 1px solid black;
   mix-blend-mode: multiply;
   background-color: rgb(14, 30, 31);
-  width: min(80%,vw); /**this sets the width of the about section to vw that is viewpoint width*/
+  width:1000px;
   overflow: hidden;      /* hides overflow */
   overflow: scroll;      /* adds scrollbars */
   overflow: auto;        /* scrollbars only if needed */
@@ -130,6 +153,28 @@ nav{
 }
 
 /*Contact*/
+
+#Form{
+  margin: 20px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: min(80%,vw); /* this sets the width of the contact section to vw*/
+  box-shadow: 3px 3px 9px black; /* this makes the shadow of the contact section*/
+}
+
+/*Connect wit me section*/
+#connect-with-me {
+  padding:10px 15px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  width: 1000px; /* this sets the width of the contact section to vw*/
+  box-shadow: 3px 3px 9px rgb(35, 34, 34); /* this makes the shadow of the contact section*/
+  z-index: 10; /* this makes sure the contact section is on top of other elements*/
+}
 
 .Contact-Image-Circle {
   width: 30px; /* sets the width of the image */
@@ -293,7 +338,6 @@ nav{
 
 
 .Row-grid{
-    
   display: flex;
   gap: 9px;
   justify-content: center;
@@ -305,17 +349,19 @@ nav{
   box-shadow: 3px 3px 9px black; /* this makes the shadow of the grid*/
 }
 
-/* Not Used Yet */
-.Circle-Image:hover{
-  transform: scale(1.2); /* this makes the image scale on hover*/
-  cursor: pointer; /* this makes the cursor a pointer on hover*/
-  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow ofthe image on hover*/
-}
+
 
 .footer{
   display: flex;/* this makes the display to flex grid mode*/
   align-items: center;/* this makes the aligns vertically in grid*/
   justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
+}
+
+/* Not Used Yet */
+.Circle-Image:hover{
+  transform: scale(1.2); /* this makes the image scale on hover*/
+  cursor: pointer; /* this makes the cursor a pointer on hover*/
+  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow ofthe image on hover*/
 }
 
 /* End of file */
