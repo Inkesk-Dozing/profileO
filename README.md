@@ -17,6 +17,15 @@ Under ØSKA
 Welcome!  
 This is my assignment submission for building a *responsive personal portfolio website* using **semantic HTML5** and **external CSS**. The project demonstrates both technical and creative skills, following all required criteria (see “Objectives & Assignment Coverage” section below).
 
+<br>
+
+Check the deployment from [Deployment](https://inkesk-dozing.github.io/profileO/) .
+
+<br>
+
+Refer to [index.html](https://github.com/Inkesk-Dozing/profileO/blob/main/index.html) for html done in the Assignment, and 
+[styles.css](https://github.com/Inkesk-Dozing/profileO/blob/main/static/muscle.css) for CSS done for the Assignment.
+
 ---
 
 ## 🎯 Objectives & Assignment Coverage
