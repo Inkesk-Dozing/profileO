@@ -4,9 +4,13 @@
 
 /* Universal Selector for default formatting*/
 * {
+ /* 
+  Not inserting rn as will form error in the UI, to edit later 
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  */
 }
 
 /* Body */
