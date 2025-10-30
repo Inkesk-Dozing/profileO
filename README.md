@@ -1,30 +1,23 @@
-# Profile
-<p align="center"><strong>The Echo Is Never Silent,<br>
-Genesis Hums With Memory.</strong></p>
-
-<p align="center">
-Created by Inkesk<br>
-Powered by OSKA<br>
-Under ØSKA
-</p>
-
-<div align="center"><strong>.</strong></div>
-
----
-
 # 🌐 Harsh Dev Jha — Personal Portfolio
 
 Welcome!  
-This is my assignment submission for building a *responsive personal portfolio website* using **semantic HTML5** and **external CSS**. The project demonstrates both technical and creative skills, following all required criteria (see “Objectives & Assignment Coverage” section below).
+This is my Assignment Submission for Web Dev Assignments *responsive personal portfolio website* using **semantic HTML5** and **external CSS**. The project demonstrates both technical and creative skills, following all required criteria (see “Objectives & Assignment Coverage” section below).
 
 <br>
 
-Check the deployment from [Deployment](https://inkesk-dozing.github.io/profileO/) .
+
+## 🎯 Assignment - 1
+
+Refer to [index.html](https://github.com/Inkesk-Dozing/profileO/blob/main/Assignment-1/index.html) for html done in the Assignment
 
 <br>
 
-Refer to [index.html](https://github.com/Inkesk-Dozing/profileO/blob/main/index.html) for html done in the Assignment, and 
-[styles.css](https://github.com/Inkesk-Dozing/profileO/blob/main/static/muscle.css) for CSS done for the Assignment.
+## 🎯 Assignment - 2
+
+Refer to [index.html](https://github.com/Inkesk-Dozing/profileO/blob/main/Assignment-2/index.html)for html done in the Assignment, and 
+[styles.css](https://github.com/Inkesk-Dozing/profileO/blob/main/Assignment-2/style.css) for CSS done for the Assignment.
+
+<br>
 
 ---
 
