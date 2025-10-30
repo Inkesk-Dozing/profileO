@@ -8,36 +8,32 @@
 </head>
 
 <body>
-    <header class="header" id="Home">
-        <h1><strong> Harsh Dev Jha </strong></a></h1>
+    <a href="#Main">Skip to main content</a>
+    <header id="Home">
+        <h1>Harsh Dev Jha</h1>
     </header>
 
-    <nav class="Navbar">
-
+    <nav>
         <ul>
             <li><a href="#Home">Home</a></li>
-            <li><a href="#About">About-me</a></li>
+            <li><a href="#About">About</a></li>
             <li><a href="#Projects">Projects</a></li>
-            <li><a href="#Form">Contact</a></li>
-            <li><a href="#Main">Skip To Main Content</a></li>
+            <li><a href="#Contact">Contact</a></li>
         </ul>
-
     </nav>
     
  
     <main id="Main">
-        <h1><strong> Welcome To My Portfolio </strong></a></h1>
-        <p>Hello , This Is My Portfolio .</p>
+        <section class="hero">
+            <h1>Welcome To My Portfolio</h1>
+            <p>Hello, this is my portfolio.</p>
+        </section>
 
-        <section id="About" class="About">
-
+        <section id="About">
             <h2>About Me</h2>
-            <img class="profile-image" src="./Placeholder.png" alt="Placeholder Image",width="150" height="150",border-radius=50%>
+            <img class="profile-image" src="./Placeholder.png" alt="Profile photo of Harsh Dev Jha, a computer science student" width="150" height="150">
 
-            <Main>
-            <p> Hello, my name is Harsh Dev Jha. I am a Student in CSE Core with a passion for everything I can literally get hands-on. I have 1 of experience in Python Beginner level and have worked on various projects that have helped me develop my skills and expertise.Currently I amd developing my HTML|CSS skills.</p>
-            </Main>
-
+            <p>Hello, my name is Harsh Dev Jha. I am a student in CSE Core with a passion for everything I can literally get hands-on. I have 1 year of experience in Python at a beginner level and have worked on various projects that have helped me develop my skills and expertise. Currently, I am developing my HTML and CSS skills.</p>
         </section>
 
         <section id="Projects">
@@ -81,43 +77,31 @@
     </main>
 
     
-    <aside id="Form" class="Form">
+    <section id="Contact">
         <h2>Contact Me</h2>
-        <form action="" method="post">
+        <form action="/submit" method="post">
+
 
             <label for="Name">Name:</label><br>
-            <input type='text' id="Name" name="Name" required placeholder="Enter Your Name"><br><br>
+            <input type='text' id="Name" name="Name" required><br><br>
 
             <label for="Email">Email:</label><br>
-            <input type='email' id="Email" name="Email" required placeholder="Enter Your Email"><br><br>
+            <input type='email' id="Email" name="Email" required><br><br>
 
             <label for="Message">Message:</label><br>
             <textarea id="Message" name="Message" rows="4" cols="50" placeholder="Leave a Message For me ... 👋" required></textarea>
-            
-            <br>
 
-            <button type="submit">Send</button>
-            
             <br>
-
+            <button type="submit">Send</button>           
+            <br>
             <button type="reset">Reset</button>
-            
             <br>
-
-            <input type="Button" value="Go to Google" onclick="window.location.href=''",target="_blank">
-        
-            <br><br>
 
         </form>
+    </section>
     
-    </aside>
-    
-    <footer class="footer">
-    <p>&copy; 2025 Harsh Dev Jha. All rights reserved.</p>
+    <footer>
+        <p>&copy; 2025 Harsh Dev Jha. All rights reserved.</p>
     </footer>
-    
-    </div>
-
-    <script src="static/skin.js"></script>
 </body>
 </html>

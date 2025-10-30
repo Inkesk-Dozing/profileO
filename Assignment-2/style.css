@@ -1,397 +1,175 @@
+/* Google Font Import  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Roboto:wght@400;700&display=swap');
 
-/* Import Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
-
-/* Universal Selector for default formatting*/
-* {
- /* 
-  Not inserting rn as will form error in the UI, to edit later 
-  
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  */
+/* General Styles & Color Theme */
+:root {
+    --primary-color: #3498db;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --text-color: #333;
+    --white-color: #ffffff;
+    --hr-color: #dddddd;
+    --project-bg: #f9f9f9;
+    --project-border: #eee;
+    --form-border: #ccc;
+    --table-border: #ddd;
+    --table-even-bg: #f2f2f2;
+    --shadow-color: rgba(0,0,0,0.1);
+    --shadow-dark: rgba(0,0,0,0.2);
 }
 
-/* Body */
-body{
-  font-family: 'Poppins', sans-serif;
-  background-color: rgb(178, 223, 178);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    line-height: 1.6;
 }
 
-/* Section separators */
-hr{
-  border: none;
-  border-top: 2px solid #010101;
-  margin: 20px auto 20px auto;
-  width: 1000px;                  /* Center and limit width of hr */
+
+h2, h3, h4 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--dark-color);
 }
 
-/*sticky*/
-
-.back-to-top{
-  position: fixed;
-  bottom:10px;
-  right:30px;
-  margin:auto;
-  width: 145px;
-  background-color: rgba(233, 226, 226, 0.7);
-  padding: 10px 0;
-  box-shadow: 0 -2px 5px rgba(0,0,0,0.5);
-  z-index: inherit;
+/* section */
+section {
+    padding: 20px 40px;
+    margin: 30px auto;
+    width: 900px;
+    background: var(--white-color);
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px var(--shadow-color);
 }
 
-/*Table*/
+/* header & nav */
+header {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    padding: 16px 32px;
+    text-align: center;
+}
 
+nav a {
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+nav a:hover {
+    background-color: var(--primary-color);
+}
+
+/* hr and Images */
+hr {
+    border: 0px;
+    height: 1px;
+    background: var(--hr-color);
+    margin: 40px 0px;
+}
+
+.about-pic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 10px auto 20px;
+    box-shadow: 0px 4px 8px var(--shadow-dark);
+    border: 3px solid var(--white-color);
+}
+
+/*  Table  */
 table {
-  background-color:#f9f9f9;
-  margin: 0 auto;
-  width: 500px;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
 }
+
 th, td {
-  padding: 10px;
-  text-align: center;
+    padding: 12px 15px;
+    border: 2px solid var(--table-border);
+    border-radius: 6px;
+    background-color: var(--white-color);
 }
 
-table th {
-  background-color: #f2f2f2; /* your chosen header color */
-  color: black;
-  font-weight: bold;
+th {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    font-weight: bold;
 }
 
-table tr:nth-child(even) {
-  background-color: #f2f2f2; /* light shade for even rows */
-}
-table tr:nth-child(odd) {
-  background-color: rgb(211, 237, 238); /* white for odd rows */
+tbody tr:nth-child(even) td {
+    background-color: var(--table-even-bg);
 }
 
-
-/*HEADER*/
-
-.header h1{
-  mix-blend-mode: multiply; /* this makes the image blend with the background */
-  text-shadow: 3px 3px 9px black;/* this makes the text have shadow*/
-  color: wheat;/* this makes the text color*/
-  font-family: cursive;/* this sets the font for text*/
-  background-image: url("./Assets/Header.jpg"); /* try an absolute path */
-  background-position: vw;/* this sets the image position*/
-  background-repeat: no-repeat;/* this makes the image not repeat itself*/
-  background-size:cover;/* this sets the bg size wrt its height/width*/
-  height: 100px;/* this makes the  height*/
-  width:1000px;/* this makes the width*/
-  display: flex;/* this makes the display to flex grid mode*/
-  align-items: center;/* this makes the aligns vertically in grid*/
-  border: 1px solid black;/* this makes the border*/
-  justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
+/* Projects Section */
+.project-div {
+    background: var(--project-bg);
+    border: 1px solid var(--project-border);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 }
 
-.header h1:hover{
-  color: aquamarine; /* this makes the text color change on hover*/
-  text-shadow: 3px 3px 9px black; /* this makes the text shadow on hover*/
-  transform: scale(1.1); /* this makes the text scale on hover*/
-  transition: all 0.3s ease-in-out; /* this makes the transition smooth*/
-  cursor:pointer; /* this makes the cursor a pointer on hover*/
+/*  Form & Button  */
+form table {
+    width: 100%;
+    margin-bottom: 15px;
 }
 
-/*NAVBAR*/
-
-nav{
-  display:flex;
-  gap:10px;
+form td {
+    padding: 10px;
 }
 
-
-.Navbar {
-  display: flex;
-  justify-content: center; /* centers the navbar items horizontally */
-  align-items: center; /* centers the navbar items vertically */
-  background-color: rgb(211, 237, 238); /* dark background color */
-  padding: 10px 0; /* vertical padding */
-  box-shadow: 0 2px 5px rgba(0,0,0,0.5); /* subtle shadow for depth */
-  width:1000px;
-  height:100px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-
+form label {
+    font-weight: bold;
 }
 
-/*SEARCHBAR*/
-
-.Searchbar {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 20px auto;
-  width: 300px;
-  background-color: #111;
-  border-radius: 8px;
-  padding: 6px;
-  box-shadow: 0 0 10px rgba(0,255,255,0.2);
+form textarea,input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--form-border);
+    border-radius: 4px;
+    box-sizing: border-box;
 }
 
-.Searchbar input {
-  flex: 1;
-  padding: 8px 12px;
-  border: none;
-  border-radius: 6px 0 0 6px;
-  background-color: #222;
-  color: #fff;
-  font-family: 'Georgia', serif;
+button {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 16px;
 }
 
-.Searchbar button {
-  padding: 8px 12px;
-  border: none;
-  border-radius: 0 6px 6px 0;
-  background-color: #00ffff;
-  color: #000;
-  cursor: pointer;
-  transition: background 0.3s ease;
+button:hover {
+    background-color: #2980b9;
 }
 
-.Searchbar button:hover {
-  background-color: #00cccc;
+/* Positioning (Back to Top) */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px var(--shadow-dark);
 }
 
-
-/*About*/
-
-.About{
-  text-shadow: 2px 2px 5px black;
-  color: black;
-  border-bottom-color: aliceblue;
-  text-align: justify;
-  font-family: Arial, sans-serif;
-  font-size: clamp(1rem,1.5vw,2rem); /* this makes the font size responsive*/
-  height: 150px;
-  line-height: 35px; /*this sets the line height*/
-  padding: 20px; /* this sets the padding*/
-  border: 1px solid black;
-  mix-blend-mode: multiply;
-  background-color: rgb(211, 237, 238);
-  width:1000px;
-  overflow: hidden;      /* hides overflow */
-  overflow: scroll;      /* adds scrollbars */
-  overflow: auto;        /* scrollbars only if needed */
-
+.back-to-top:hover {
+    background-color: #2980b9;
 }
-
-/*Contact*/
-
-#Form{
-  margin: 20px auto;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  width: min(80%,vw); /* this sets the width of the contact section to vw*/
-  box-shadow: 3px 3px 9px black; /* this makes the shadow of the contact section*/
+/* Footer */
+.footer {
+    background-color: var(--dark-color);
+    color: var(--white-color);
+    text-align: center;
+    padding: 15px 0px;
+    margin-top: 40px;
 }
-
-/*Connect wit me section*/
-#connect-with-me {
-  padding:10px 15px;
-  margin: 20px auto;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: #f9f9f9;
-  width: 1000px; /* this sets the width of the contact section to vw*/
-  box-shadow: 3px 3px 9px rgb(35, 34, 34); /* this makes the shadow of the contact section*/
-  z-index: 10; /* this makes sure the contact section is on top of other elements*/
-}
-
-.Contact-Image-Circle {
-  width: 30px; /* sets the width of the image */
-  height: 30px; /* sets the height of the image */
-  border-radius: 50%; /* makes the image circular */
-  object-fit: cover; /* ensures the image fills the circle */
-  border: 3px solid black; /* adds a border */
-  box-shadow: 3px 3px 9px black; /* adds a shadow */
-  cursor: pointer;
-  transition: all 0.3s ease-in-out; /* smooth transitions */
-
-  /* Fade-in on page load */
-  opacity: 0;
-  animation: fadeIn 1s ease forwards, corruptGlitch 1.5s infinite,hackerGlitch 2s infinite;
-  animation-delay: 0.3s;
-}
-
-@keyframes fadeIn {
-  to {
-    opacity: 1;
-  }
-}
-
-/*
-@keyframes glitch {
-  0% {
-    transform: translate(0);
-  }
-  20% {
-    transform: translate(-2px, 2px);
-  }
-  40% {
-    transform: translate(2px, -2px);
-  }
-  60% {
-    transform: translate(-2px, -2px);
-  }
-  80% {
-    transform: translate(2px, 2px);
-  }
-  100% {
-    transform: translate(0);
-  }
-} 
-*/
-
-/* Corrupted hacker-style animation */
-@keyframes corruptGlitch {
-  0% {
-    transform: scale(1) rotate(0deg);
-    filter: none;
-  }
-  10% {
-    transform: scale(1.05) rotate(2deg);
-    filter: grayscale(100%) blur(1px);
-  }
-  20% {
-    transform: scale(0.95) rotate(-2deg);
-    filter: invert(100%) brightness(120%);
-  }
-  30% {
-    transform: scale(1.1) rotate(1deg);
-    filter: hue-rotate(90deg) contrast(250%);
-  }
-  40% {
-    transform: scale(0.9) rotate(-1deg);
-    filter: sepia(80%) saturate(200%);
-  }
-  50% {
-    transform: scale(1) rotate(0deg);
-    filter: none;
-  }
-  100% {
-    transform: scale(1) rotate(0deg);
-    filter: none;
-  }
-}
-
-/* Hacker-style glitch */
-@keyframes hackerGlitch {
-  0% { transform: translate(0); filter: none; }
-  10% { transform: translate(-1px, 1px) skewX(5deg); filter: hue-rotate(20deg); }
-  20% { transform: translate(1px, -1px) skewY(5deg); filter: hue-rotate(-20deg); }
-  30% { transform: translate(-2px, 2px) skewX(-5deg); filter: contrast(200%); }
-  40% { transform: translate(2px, -2px) skewY(-5deg); filter: brightness(150%); }
-  50% { transform: translate(0); filter: none; }
-  100% { transform: translate(0); filter: none; }
-}
-
-.Contact-Image-Circle:hover {
-  transform: scale(1.2); /* scales the image on hover */
-  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* adds a glow effect on hover */
-  cursor: pointer; /* changes cursor to pointer on hover */
-}
-
-
-.Contact-Image {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 2px solid #222;
-  box-shadow: 0 0 6px rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
-  opacity: 0;
-  animation: fadeIn 0.8s ease forwards, pulseGlow 3s ease-in-out infinite;
-  animation-delay: 0.3s;
-}
-
-/* Fade-in on page load */
-@keyframes fadeIn {
-  from { opacity: 0; transform: scale(0.8); }
-  to { opacity: 1; transform: scale(1); }
-}
-
-/* Subtle pulsing glow */
-@keyframes pulseGlow {
-  0%, 100% {
-    box-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
-  }
-  50% {
-    box-shadow: 0 0 12px rgba(255, 255, 255, 0.4);
-  }
-}
-
-/* Hover effect */
-.Contact-Image:hover {
-  transform: scale(1.2); /* scales the image on hover */
-  box-shadow: 3px 3px 9px black, 0 0 10px 5px rgb(23, 10, 209); /* adds a glow effect on hover */
-  cursor: pointer; /* changes cursor to pointer on hover */
-}
-
-
-.Tooltip-container {
-  position: relative;
-  display: inline-block;
-}
-
-.Tooltip-text {
-  visibility: hidden;
-  opacity: 0;
-  background-color: #222;
-  color: #fff;
-  text-align: center;
-  padding: 6px 10px;
-  border-radius: 6px;
-  position: absolute;
-  bottom: 110%; /* slightly above the image */
-  left: 50%;
-  transform: translateX(-50%);
-  white-space: nowrap;
-  z-index: 1;
-  transition: opacity 0.3s ease;
-}
-
-.Tooltip-container:hover .hover-text {
-  visibility: visible;
-  opacity: 1;
-}
-
-
-.Row-grid{
-  display: flex;
-  gap: 9px;
-  justify-content: center;
-  flex-wrap: wrap;
-  width: min(80%,vw); /* this sets the width of the grid to vw*/
-  border: 1px solid black; /* this makes the border*/
-  background-color: rgb(215, 239, 240); /* this sets the background color*/
-  mix-blend-mode: multiply; /* this makes the image blend with the background*/
-  box-shadow: 3px 3px 9px black; /* this makes the shadow of the grid*/
-}
-
-
-
-.footer{
-  display: flex;/* this makes the display to flex grid mode*/
-  align-items: center;/* this makes the aligns vertically in grid*/
-  justify-content: center;/* this makes the align horizontally in grid just like text-align but in a whole item and not just sentence*/
-}
-
-/* Not Used Yet */
-.Circle-Image:hover{
-  transform: scale(1.2); /* this makes the image scale on hover*/
-  cursor: pointer; /* this makes the cursor a pointer on hover*/
-  box-shadow: 3px 3px 9px black, 0 0 10px 5px aquamarine; /* this makes the shadow ofthe image on hover*/
-}
-
-/* End of file */

@@ -1,68 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HDJ - Portfolio Inkesk Skeleton</title>
+    <title>My Personal Portfolio</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+<body id="top">
 
-<body>
-    <header class="header" id="Home">
-        <h1><strong> My Portfolio </strong></a></h1>
+    <header>
+        <h1>My Portfolio</h1>
+        <nav>
+    
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+            
+        </nav>
     </header>
 
-    <div>
-        <nav class="Navbar">
-
-            <a href="#Home"><img src="static/Assets/Home.jpeg" class="Contact-Image"></a>
-            <a href="#About">About-me</a>
-            <a href="#Projects">Projects</a>
-            <a href="#Form">Form</a>
-            <a href="#connect-with-me"><img src="static/Assets/Contact.jpeg" class="Contact-Image"></a>
-            <a href="#Main">Skip To Main Content</a>
-
-        </nav>
-    </div>
-
-    <main id="Main">
-        <h1><strong> Welcome To My Portfolio </strong></a></h1>
-        <p>Hello , This Is My Portfolio .</p>
-
-        <section id="About" class="About">
-
-            <h2>About Me</h2>
-            <img class="profile-image" src="static/Assets/Placeholder.jpeg" alt="Harsh Dev Jha"
-                onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/333?text=Image';">
-
-            <Main>
-                <p> Hello, my name is Harsh Dev Jha. I am a Student in CSE Core with a passion for everything I can
-                    literally get hands-on. I have 1 of experience in Python Beginner level and have worked on various
-                    projects that have helped me develop my skills and expertise.Currently I amd developing my HTML|CSS
-                    skills.</p>
-            </Main>
-
-        </section>
-
-        <section id="Projects">
-            <h2><u>My Projects</u></h2>
-
-            <strong>Screenshot Compiler:</strong> A web application designed to help manage your screenshots,supporting
-            multimedia.
-
-            <br>
-
-            <strong>Password Strength Checker:</strong> A tool for password strength checker and providing user feedback
-            about their cryptic.
-
+    <main>
+        <section id="about">
+            <h3>About Me</h3>
+            <img src="./Placeholder.png" alt="Harsh Dev Jha" class="about-pic">
+            <p>Hello, my name is Harsh Dev Jha. I am a Student in CSE Core with a passion for everything I can literally get hands-on. I have 1 year of experience in Python at Beginner level and have worked on various projects that have helped me develop my skills and expertise. Currently I am developing my HTML and CSS skills.</p>
         </section>
 
         <hr>
 
         <section id="skills">
-            <h2>Technical Skills</h2>
-            <table border="16">
+            <h3>My Skills</h3>
+            <table>
                 <thead>
                     <tr>
                         <th>Skill</th>
@@ -89,56 +58,51 @@
                 </tbody>
             </table>
         </section>
+
         <hr>
+
+        <section id="projects">
+            <h3>My Projects</h3>
+            <div class="project-div">
+                <h4>Screenshot Compiler</h4>
+                <p>A web application designed to help manage your screenshots, supporting multimedia.</p>
+            </div>
+            <div class="project-div">
+                <h4>Password Strength Checker</h4>
+                <p>A tool for password strength checker and providing user feedback about their cryptic.</p>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id="contact">
+            <h3>Contact Me</h3>
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="Name">Name</label></td>
+                        <td><input type="text" id="Name" name="Name" required placeholder="Enter Your Name"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Email">Email</label></td>
+                        <td><input type="email" id="Email" name="Email" required placeholder="Enter Your Email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="Message">Message</label></td>
+                        <td><textarea id="Message" name="Message" rows="4" required placeholder="Leave a Message For me ..."></textarea></td>
+                    </tr>
+                </table>
+                <button type="submit">Send Message</button>
+                <button type="reset">Reset</button>
+            </form>
+        </section>
     </main>
 
-
-
-    <aside id="Form">
-
-        <h2>Contact Me</h2>
-        <form action="" method="post">
-
-            <label for="Name">Name:</label><br>
-            <input type='text' id="Name" name="Name" required placeholder="Enter Your Name"><br><br>
-
-            <label for="Email">Email:</label><br>
-            <input type='email' id="Email" name="Email" required placeholder="Enter Your Email"><br><br>
-
-            <label for="Message">Message:</label><br>
-            <textarea id="Message" name="Message" rows="4" cols="50" placeholder="Leave a Message For me ... 👋"
-                required></textarea>
-
-            <br>
-
-            <button type="submit">Send</button>
-
-            <br>
-
-            <button type="reset">Reset</button>
-
-            <br><br>
-
-        </form>
-
-    </aside>
-
-<div class="Theme-Changer">
-    <button id="theme-toggle-button" onclick="toggleTheme()">Toggle Theme</button>
-</div>
-
-<div>
-    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-        ↑ Back to Top
-    </button>
-
-</div>
+    <a href="#top"><button class="back-to-top">Back to Top</button></a>
 
     <footer class="footer">
         <p>&copy; 2025 Harsh Dev Jha. All rights reserved.</p>
     </footer>
-
-    </div>
     
 </body>
 
