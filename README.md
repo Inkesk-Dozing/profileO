@@ -23,111 +23,136 @@ Refer to [index.html](https://github.com/Inkesk-Dozing/profileO/blob/main/Assign
 
 ## 🎯 Objectives & Assignment Coverage
 
-- **Use only semantic HTML5 tags:** `<header>`, `<nav>`, `<main>`, `<section>`, `<aside>`, `<footer>`, `<table>`, `<form>`, `<button>`, etc.
-- **Separation of style and structure:** All styles are in an external CSS (`muscle.css`), no inline CSS.
+### Assignment-1: Semantic HTML5 Portfolio
+- **Use only semantic HTML5 tags:** `<header>`, `<nav>`, `<main>`, `<section>`, `<footer>`, `<table>`, `<form>`, `<button>`, etc.
+- **Navigation bar** with links for smooth section jumps.
+- **Structured content:** Includes hero section, about with profile image, projects list, skills table, and contact form.
+- **Accessibility:** Alt text for images, semantic labels for forms.
+- **Validation:** Form fields use `required` attributes.
+- **No external CSS:** Styles are not applied; HTML structure focuses on semantics.
+
+### Assignment-2: HTML5 with External CSS
+- **Separation of style and structure:** All styles are in an external CSS (`style.css`), no inline CSS.
 - **Navigation bar** with background, links, hover/focus, and padding.
-- **Consistent color theme:** Uses HEX/RGB colors, as required.
+- **Consistent color theme:** Uses CSS variables for HEX/RGB colors.
 - **Fixed and responsive sections:** Utilizes box model (margin, padding, border, border-radius, box-shadow) for spacing and layout.
 - **Styled table for skills:** Alternating row colors using `:nth-child` selector, bold headers, cell padding.
 - **Styled buttons:** Custom color, padding, border-radius, and interaction effects on hover/focus.
-- **CSS positioning:** Example: fixed contact bar (`.fixed` class) and relative positions for other UI elements.
+- **CSS positioning:** Example: fixed "Back to Top" button and relative positions for other UI elements.
 - **Custom `<hr>` separators** for section clarity.
-- **Accessibility:** Alt text for all images, semantic labels for forms, and Google Fonts for legibility.
+- **Accessibility:** Alt text for images, semantic labels for forms, and Google Fonts for legibility.
 - **Validation:** All form fields use `required` attributes.
 - **Mobile responsiveness:** Layout adjusts via responsive units and tested on multiple device widths.
-- **Fallbacks:** Profile and contact images have JS or HTML `onerror` fallback where needed.
+- **Fallbacks:** Profile images have alt text for accessibility.
 
 ---
 
 ## 🧠 About This Project
 
-The website is structured around the following core ideas:
-- **Clarity:** Each section—welcome, about, projects, skills, contact—has a clear role.  
+These assignments demonstrate the progression from semantic HTML5 structure to styled, responsive web design. Assignment-1 focuses on semantic markup for accessibility and structure, while Assignment-2 adds external CSS for visual design and interactivity.
+
+The websites are structured around the following core ideas:
+- **Clarity:** Each section—welcome, about, projects, skills, contact—has a clear role.
 - **Semantics:** HTML tag choice reflects the meaning and role of content, improving accessibility and SEO.
-- **Separation:** All CSS is kept in a separate file for maintainability and assignment compliance.
-- **Progressive enhancement:** Future JavaScript features (see `skin.js`) planned.
+- **Separation:** In Assignment-2, all CSS is kept in a separate file for maintainability and assignment compliance.
+- **Progressive enhancement:** Future JavaScript features could be added for interactivity.
 
 ---
 
 ## 🧩 Site Structure
 
-### 🏠 Header & Navigation
-- `<header>` contains my name and navigation (`<nav>`) with easily clickable links for smooth section jumps.
-- The search bar uses an `<input>` and `<button>`, styled for subtlety and functionality.
+### Assignment-1 Structure
+- **Header & Navigation**: `<header>` with name and `<nav>` with links to sections.
+- **Main Content (`<main>`)**: Includes hero section, about with profile image, projects list, skills table, and contact form.
+- **Contact Form**: Outside `<main>`, with labels, inputs, and buttons.
+- **Footer**: Copyright notice.
 
-### 📜 Main Content (`<main>`)
-- **Welcome Section**: Short introduction and project context.
-- **About Me**: Profile image with `alt`, short bio, fallback image logic using the `onerror` attribute.
-- **Projects**: Two example tools, listed in simple list elements.
-- **Skills Table**: `<table>` with `<thead>`, `<tr>`, `<th>`, and `<td>`, styled for alternation, borders, and legibility.
+### Assignment-2 Structure
+- **Header & Navigation**: `<header>` with title and inline `<nav>` links.
+- **Main Content (`<main>`)**: Sections for about (with image), skills table, projects (divs), and contact form (table-based).
+- **Back to Top Button**: Fixed positioned link.
+- **Footer**: Copyright notice.
 
-### 🧾 Contact Form (inside `<aside>`)
-- Contact form includes proper `<label>` for accessibility, input fields with `required` validation, and a “Go to Google” demo button.
-- Reset and Send functionalities both present.
-
-### 📌 Fixed Contact Panel
-- The `.fixed` `<div>` is styled with CSS positioning for a persistent floating contact sidebar.
-- Each contact icon uses `<img>` (with `alt`), clickable, and visually distinctive.
-
-### 🧙 Footer
-- `<footer>` closes the site with a copyright.
+Both assignments use semantic HTML5 for structure and accessibility.
 
 ---
 
 ## 🛠 Technologies and Methods Used
 
-- **HTML5** with all major semantic tags.
-- **CSS3**: Element, class, and ID selectors for precise styling.
-- **External CSS only**—no inline styles or embedded `<style>` tags.
-- **Box model usage**: `margin`, `padding`, `border`, `border-radius`, and shadows for visual clarity and structure.
-- **Pseudo-classes**: `:hover`, `:focus`, `:nth-child(even)` and `:nth-child(odd)` for accessibility and interactive behavior.
-- **Responsive units**: `vw`, `%` and `clamp()` for font size and width.
-- **Google Fonts integration** for clear, modern typography.
-- **Proper file structure** for easy navigation and future extension.
+### Assignment-1
+- **HTML5** with semantic tags for structure and accessibility.
+- No external CSS; focuses on markup only.
+
+### Assignment-2
+- **HTML5** with semantic tags.
+- **CSS3**: Element, class, and ID selectors for styling.
+- **External CSS only**—no inline styles.
+- **Box model usage**: `margin`, `padding`, `border`, `border-radius`, and shadows.
+- **Pseudo-classes**: `:hover`, `:focus`, `:nth-child(even)` and `:nth-child(odd)`.
+- **Responsive units**: `%` for layout.
+- **Google Fonts integration** for typography.
+- **CSS variables** for consistent color theme.
 
 ---
 
 ## 👁️ Code and File Layout
 
 ```
-/profileO/
-├── index.html
-├── static/
-│   ├── muscle.css          # All styles, fully external
-│   ├── skin.js             # Placeholder for interactive features
-│   └── Assets/
-│         ├── profile-image.jpg
-│         ├── github.png
-│         └── ...
-└── README.md
+profileO/
+├── README.md
+├── Assignment-1/
+│   ├── index.html          # Semantic HTML5 portfolio
+│   └── Placeholder.png     # Profile image placeholder
+└── Assignment-2/
+    ├── index.html          # HTML5 portfolio with external CSS
+    ├── style.css           # External styles for Assignment-2
+    └── Placeholder.png     # Profile image placeholder
 ```
 
-**index.html**  
-- Contains all semantic elements.  
-- Scripts (like `skin.js`) referenced at the end for enhancements.
+**Assignment-1/index.html**  
+- Semantic HTML5 structure with header, nav, main sections, form, and footer.  
+- No external CSS; focuses on markup and accessibility.
 
-**muscle.css**  
-- Grid/flex layouts, responsive containers, navigation bar, fixed contact bar, button styles, custom table styling, animated pseudo-classes.
+**Assignment-2/index.html**  
+- Semantic HTML5 structure with sections, table, form, and back-to-top button.
+
+**Assignment-2/style.css**  
+- External CSS with variables, selectors, box model, pseudo-classes, and responsive design.
 
 ---
 
 ## 💡 How the Code Is Written
 
-- Structured with indentation and logical groupings for clarity
-- Semantic elements mapped to content purpose (not just for effect)
-- All JavaScript is isolated for optional enhancements (keeps core HTML/CSS clean)
-- Each feature reflects an assignment criterion—no extraneous dependencies
+### Assignment-1
+- Structured with indentation and logical groupings for clarity.
+- Semantic elements mapped to content purpose for accessibility.
+- Focuses on HTML5 markup without styling.
+
+### Assignment-2
+- Structured with indentation and logical groupings for clarity.
+- Semantic elements mapped to content purpose for accessibility.
+- External CSS for separation of concerns, using variables and selectors.
+- Each feature reflects assignment criteria—no extraneous dependencies.
 
 ---
 
 ## ✅ Assignment Checklist
 
-- [x] External CSS
+### Assignment-1
+- [x] Semantic HTML5 tags used throughout
+- [x] Navigation bar with links
+- [x] Structured content with sections, table, and form
+- [x] Accessibility: Alt text for images, labels for forms
+- [x] Required validation on form fields
+- [x] Clean code organization
+
+### Assignment-2
+- [x] External CSS (no inline styles)
 - [x] Semantic tags used throughout
 - [x] Styled table with alternate row shading, bold headers
 - [x] Custom nav bar and buttons
 - [x] Visually distinct sections, separators with hr
-- [x] Fixed sidebar/element using CSS positioning
+- [x] Fixed element using CSS positioning (Back to Top button)
 - [x] Responsive/mobile friendly
 - [x] Required validation on form
 - [x] Accessible images and form labeling
