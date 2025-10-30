@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HDJ - Portfolio Inkesk Skeleton</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header class="header" id="Home">
+        <h1><strong> My Portfolio </strong></a></h1>
+    </header>
+
+    <div>
+        <nav class="Navbar">
+
+            <a href="#Home"><img src="static/Assets/Home.jpeg" class="Contact-Image"></a>
+            <a href="#About">About-me</a>
+            <a href="#Projects">Projects</a>
+            <a href="#Form">Form</a>
+            <a href="#connect-with-me"><img src="static/Assets/Contact.jpeg" class="Contact-Image"></a>
+            <a href="#Main">Skip To Main Content</a>
+
+            <div class="Searchbar">
+                <input type="text" id="searchInput" placeholder="Search the Site...">
+                <button type="submit">🔍</button>
+            </div>
+        </nav>
+    </div>
+
+    <main id="Main">
+        <h1><strong> Welcome To My Portfolio </strong></a></h1>
+        <p>Hello , This Is My Portfolio .</p>
+
+        <section id="About" class="About">
+
+            <h2>About Me</h2>
+            <img class="profile-image" src="static/Assets/Placeholder.jpeg" alt="Harsh Dev Jha"
+                onerror="this.onerror=null;this.src='https://placehold.co/150x150/cccccc/333?text=Image';">
+
+            <Main>
+                <p> Hello, my name is Harsh Dev Jha. I am a Student in CSE Core with a passion for everything I can
+                    literally get hands-on. I have 1 of experience in Python Beginner level and have worked on various
+                    projects that have helped me develop my skills and expertise.Currently I amd developing my HTML|CSS
+                    skills.</p>
+            </Main>
+
+        </section>
+
+        <section id="Projects">
+            <h2><u>My Projects</u></h2>
+
+            <strong>Screenshot Compiler:</strong> A web application designed to help manage your screenshots,supporting
+            multimedia.
+
+            <br>
+
+            <strong>Password Strength Checker:</strong> A tool for password strength checker and providing user feedback
+            about their cryptic.
+
+        </section>
+
+        <hr>
+
+        <section id="skills">
+            <h2>Technical Skills</h2>
+            <table border="16">
+                <thead>
+                    <tr>
+                        <th>Skill</th>
+                        <th>Level</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Python</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>HTML</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>CSS</td>
+                        <td>Beginner</td>
+                    </tr>
+                    <tr>
+                        <td>JavaScript</td>
+                        <td>Learning</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+        <hr>
+    </main>
+
+
+
+    <aside id="Form">
+
+        <h2>Contact Me</h2>
+        <form action="" method="post">
+
+            <label for="Name">Name:</label><br>
+            <input type='text' id="Name" name="Name" required placeholder="Enter Your Name"><br><br>
+
+            <label for="Email">Email:</label><br>
+            <input type='email' id="Email" name="Email" required placeholder="Enter Your Email"><br><br>
+
+            <label for="Message">Message:</label><br>
+            <textarea id="Message" name="Message" rows="4" cols="50" placeholder="Leave a Message For me ... 👋"
+                required></textarea>
+
+            <br>
+
+            <button type="submit">Send</button>
+
+            <br>
+
+            <button type="reset">Reset</button>
+
+            <br><br>
+
+        </form>
+
+    </aside>
+
+    <div>
+        <hr>
+        <section id="connect-with-me">
+
+            <div class="Tooltip-Container">
+
+                <div class="Row-grid">
+
+                    <h2> Connect With Me </h2>
+
+                    <p id="Github"><img src="static/Assets/github.png" class='Contact-Image-Circle' width="50px"
+                            alt="GitHub Icon" target="_blank"
+                            onclick="window.open('https://www.github.com/Inkesk-Dozing/','_blank')" title="Github"> </p>
+
+                    <!-- cant use target='_blank' in onclick , only works in <a> tag , instead use it this way--->
+
+                    <p id="LinkedIn"><img src="static/Assets/linkedin.png" class='Contact-Image-Circle' width="50px"
+                            alt="LinkedIn Icon" target="_blank"
+                            onclick="window.open('https://www.linkedin.com/in/harsh-dev-jha-primus/', '_blank')"
+                            title="LinkedIn"> </p>
+
+                    <p id="Instagram"><img src="static/Assets/instagram.webp" class='Contact-Image-Circle' width="50px"
+                            alt="Instagram Icon" target="_blank"
+                            onclick="window.open('https://instagram.com/uff_thedifficulty/', '_blank')"
+                            title="Instagram"> </p>
+
+                    <p id="Email"><img src="static/Assets/Email.jpg" class='Contact-Image-Circle' width="50px"
+                            alt="Email Icon" target="_blank" onclick="window.open('mailto:devvindj@gmail.com')"
+                            title="Send Email"> </p>
+
+                    <p id="Portfolio"><img src="static/Assets/Portfolio.png" class='Contact-Image-Circle' width="50px"
+                            alt="Portfolio Icon" target="_blank" onclick="window.location.href=''" title="Portfolio">
+                    </p>
+
+                    <p id="Resume"><img src="static/Assets/Resume.webp" class='Contact-Image' width="30px"
+                            alt="Resume Icon" target="_blank" onclick="window.location.href=''" title="Resume"> </p>
+
+                    <br>
+                </div>
+            </div>
+        </section>
+    </div>
+
+<div class="Theme-Changer">
+    <button id="theme-toggle-button" onclick="toggleTheme()">Toggle Theme</button>
+</div>
+
+<div>
+    <button class="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        ↑ Back to Top
+    </button>
+
+</div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Harsh Dev Jha. All rights reserved.</p>
+    </footer>
+
+    </div>
+
+    <script src="./static/skin.js"></script>
+</body>
+
+</html>
