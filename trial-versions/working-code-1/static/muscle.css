@@ -20,13 +20,6 @@
 
 html {
   scroll-behavior: smooth;
-  /* Premium, precise geometric SVG cursor */
-  cursor: url('data:image/svg+xml;utf8,<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="%23ffffff" stroke-width="1.5" stroke-opacity="0.6"/><circle cx="12" cy="12" r="1.5" fill="%23ffffff"/></svg>') 12 12, crosshair;
-}
-
-/* Contextual expanding cursor for interactable elements */
-a, button, input, textarea, .realm-item {
-  cursor: url('data:image/svg+xml;utf8,<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="16" cy="16" r="14" stroke="%23ffffff" stroke-width="1.5" stroke-dasharray="4 4" stroke-opacity="0.9"/><circle cx="16" cy="16" r="3" fill="%23ffffff"/></svg>') 16 16, pointer !important;
 }
 
 body {
@@ -97,20 +90,14 @@ body {
 .section-title {
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.5rem);
-  font-weight: 300; 
+  font-weight: 400; /* Increased */
   margin-bottom: 4rem;
   text-transform: uppercase;
-  letter-spacing: 15px; 
+  letter-spacing: 15px; /* Extreme tracking */
   text-align: center;
-  color: #fff;
-  /* Sophisticated Soft Glow */
-  text-shadow: 0 0 40px rgba(255, 255, 255, 0.4), 0 5px 30px rgba(0,0,0,0.8);
-  transition: text-shadow 0.6s ease, transform 0.6s ease;
-}
-
-.section-title:hover {
-  text-shadow: 0 0 60px rgba(255, 255, 255, 0.8), 0 5px 30px rgba(0,0,0,1);
-  transform: scale(1.02);
+  color: var(--text-main);
+  opacity: 0.95;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.2), 0 5px 30px rgba(0,0,0,1);
 }
 
 .section-title::after {
@@ -194,15 +181,10 @@ body {
   text-transform: uppercase;
   line-height: 1.2;
   letter-spacing: clamp(10px, 3vw, 25px);
-  margin-left: clamp(10px, 3vw, 25px); 
+  color: var(--text-main);
+  margin-left: clamp(10px, 3vw, 25px); /* Offset for centering via tracking */
   margin-bottom: 2rem;
-  
-  /* Metallic / Starlight Gradient Clipping WOW Factor */
-  background: linear-gradient(180deg, #FFFFFF 0%, #A0A0B0 50%, #5E4B8A 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  filter: drop-shadow(0 0 30px rgba(255,255,255,0.2));
+  opacity: 0.9;
 }
 
 .hero .subtitle {
@@ -273,12 +255,6 @@ body {
   color: var(--text-main);
   letter-spacing: 8px;
   margin-bottom: 1rem;
-  text-shadow: 0 0 30px rgba(255,255,255,0.2);
-  transition: text-shadow 0.6s ease;
-}
-
-.realm-item:hover .realm-title {
-  text-shadow: 0 0 50px rgba(255,255,255,0.8);
 }
 
 .realm-desc {
@@ -311,90 +287,6 @@ body {
 }
 
 
-/* Notable Works (Horizontal Carousel) */
-#Notable {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding: 5rem 0;
-  overflow: hidden;
-}
-
-.carousel-container {
-  width: 100%;
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  /* Hide scrollbar for a clean UI */
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-  padding: 2rem 5vw;
-}
-.carousel-container::-webkit-scrollbar { display: none; }
-
-.carousel-track {
-  display: flex;
-  gap: 3rem;
-  width: max-content;
-  padding: 0 10vw; /* padding to allow center snapping */
-}
-
-.carousel-card {
-  flex: 0 0 400px;
-  height: 280px;
-  scroll-snap-align: center;
-  background: rgba(255, 255, 255, 0.02);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  border-radius: 10px;
-  padding: 3rem 2.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  text-decoration: none;
-  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel-card:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.2);
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.8), inset 0 0 30px rgba(255,255,255,0.02);
-}
-
-.carousel-card h4 {
-  font-family: var(--font-display);
-  color: #fff;
-  font-size: 1.5rem;
-  font-weight: 300;
-  letter-spacing: 4px;
-  text-transform: uppercase;
-  margin-bottom: 1rem;
-}
-
-.carousel-card p {
-  color: var(--text-muted);
-  font-size: 0.95rem;
-  line-height: 1.8;
-  font-weight: 300;
-}
-
-.card-link {
-  font-family: var(--font-body);
-  color: rgba(255,255,255,0.4);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  transition: color 0.4s;
-  align-self: flex-start;
-  margin-top: auto;
-}
-
-.carousel-card:hover .card-link {
-  color: #fff;
-}
-
-
 /* Abstract Essence (Skills) */
 .essence-cloud {
   display: flex;
@@ -411,14 +303,13 @@ body {
   color: var(--text-muted);
   letter-spacing: 6px;
   text-transform: uppercase;
-  transition: color 0.5s ease, text-shadow 0.5s ease, transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: color 0.5s;
   cursor: default;
 }
 
 .essence-tag:hover {
   color: var(--text-main);
-  text-shadow: 0 0 30px rgba(255, 255, 255, 0.8), 0 0 10px rgba(255, 255, 255, 0.5);
-  transform: scale(1.05);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
 }
 
 
