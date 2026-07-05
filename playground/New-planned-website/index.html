@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <title>Harsh Dev Jha — The Uncreated Source</title>
+    <meta name="description" content="Harsh Dev Jha (Primus) — Software Engineer & Systems Architect. Bridging complex logic with high-end aesthetic execution. Embedded AI, cross-platform systems, and the Eozka organization.">
+    <meta name="author" content="Harsh Dev Jha">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://inkesk-dozing.github.io/profileo/">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Harsh Dev Jha — The Uncreated Source">
+    <meta property="og:description" content="Software Engineer. Systems Architect. Nothing above.">
+    <meta property="og:url" content="https://inkesk-dozing.github.io/profileo/">
+
+    <!-- Security Headers via Meta (supplement) -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Content-Security-Policy" content="
+        default-src 'self';
+        script-src 'self' 'nonce-HDJ2024PRIMUS';
+        style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+        font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+        img-src 'self' data:;
+        connect-src 'self';
+        frame-ancestors 'none';
+    ">
+
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Fonts — SRI not needed for Google Fonts (served over HTTPS with HTTP caching) -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icons — Font Awesome with SRI -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W=="
+        crossorigin="anonymous"
+        referrerpolicy="no-referrer">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Ambient Background Glow -->
+    <div class="ambient-glow ambient-glow-1" aria-hidden="true"></div>
+    <div class="ambient-glow ambient-glow-2" aria-hidden="true"></div>
+
+    <!-- =================== NAVBAR =================== -->
+    <div class="nav-wrapper" id="navWrapper" role="navigation" aria-label="Main navigation">
+        <nav class="navbar">
+            <a href="#hero" class="nav-brand" aria-label="Harsh Dev Jha — Home">HDJ.</a>
+
+            <div class="nav-links" role="list">
+                <a href="#about" role="listitem">Origin</a>
+                <a href="#skills" role="listitem">Arsenal</a>
+                <a href="#projects" role="listitem">Realms</a>
+                <a href="#experience" role="listitem">Ledger</a>
+                <a href="#contact" class="nav-cta" role="listitem">Transmit</a>
+            </div>
+
+            <button class="nav-hamburger" id="hamburgerBtn" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobileMenu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </nav>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="nav-mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobile navigation">
+        <a href="#about" class="mobile-nav-link">Origin</a>
+        <a href="#skills" class="mobile-nav-link">Arsenal</a>
+        <a href="#projects" class="mobile-nav-link">Realms</a>
+        <a href="#experience" class="mobile-nav-link">Ledger</a>
+        <a href="#contact" class="mobile-nav-link">Transmit</a>
+    </div>
+
+    <!-- =================== MAIN =================== -->
+    <main id="mainContent">
+
+        <!-- =================== HERO =================== -->
+        <section id="hero" aria-label="Hero section">
+            <div class="hero-grid" aria-hidden="true"></div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-eyebrow" aria-label="Status: Online">
+                        <span class="hero-eyebrow-dot" aria-hidden="true"></span>
+                        Software Engineer &amp; Systems Architect
+                    </span>
+
+                    <h1 class="hero-title">THE UNCREATED</h1>
+                    <span class="hero-title-ghost" aria-hidden="true">SOURCE.</span>
+
+                    <p class="hero-description">
+                        I'm <strong>Harsh Dev Jha</strong> — I build systems that think, interfaces that breathe,
+                        and architectures that last. No boundaries, no ceiling. Nothing above.
+                    </p>
+
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary" id="heroExploreCta">
+                            <i class="fa-regular fa-compass" aria-hidden="true"></i>
+                            Explore My Work
+                        </a>
+                        <a href="#contact" class="btn btn-ghost" id="heroContactCta">
+                            Reach Out
+                            <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scroll-indicator" aria-hidden="true">
+                <span>Scroll</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- =================== ABOUT =================== -->
+        <section id="about" class="section" aria-label="About Harsh Dev Jha">
+            <div class="container">
+                <div class="about-grid">
+                    <div class="about-text reveal" id="aboutText">
+                        <span class="section-label">01 — Origin</span>
+                        <h2 class="section-heading">Built to Build<br>Without Limits.</h2>
+
+                        <p>
+                            I'm <strong>Harsh Dev Jha (Primus)</strong>, a Software Engineer and Systems Architect
+                            focused on bridging complex logic with high-end aesthetic execution. My work sits at
+                            the intersection of intelligence and design — I don't just write code, I engineer experiences.
+                        </p>
+                        <p>
+                            My expertise spans from foundational embedded AI models for safety-critical environments
+                            to designing performant, cross-platform application suites from the ground up.
+                            I actively lead development on <a href="https://github.com/Inkesk-Dozing" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            and build collaboratively as a founding member of the
+                            <a href="https://github.com/eozkull" target="_blank" rel="noopener noreferrer">Eozka (eozkull)</a> organization.
+                        </p>
+                        <p>
+                            The concept is simple: creation without a creator. The systems run, the interfaces render,
+                            the intelligence infers — and there's nothing above to claim credit for what was already
+                            inevitable.
+                        </p>
+                    </div>
+
+                    <div class="about-visual reveal reveal-delay-2" id="aboutVisual" aria-label="Core attributes">
+                        <div class="about-tag">
+                            <span class="about-tag-icon" aria-hidden="true">⚡</span>
+                            Embedded AI & Spatial Intelligence
+                        </div>
+                        <div class="about-tag">
+                            <span class="about-tag-icon" aria-hidden="true">🏗️</span>
+                            Cross-Platform Systems Architecture
+                        </div>
+                        <div class="about-tag">
+                            <span class="about-tag-icon" aria-hidden="true">🎨</span>
+                            High-End Aesthetic Engineering
+                        </div>
+                        <div class="about-tag">
+                            <span class="about-tag-icon" aria-hidden="true">🔬</span>
+                            Mathematical Modeling & Analysis
+                        </div>
+                        <div class="about-tag">
+                            <span class="about-tag-icon" aria-hidden="true">🌐</span>
+                            WebGL & Shader Programming
+                        </div>
+                        <div class="about-tag">
+                            <span class="about-tag-icon" aria-hidden="true">📱</span>
+                            Flutter & Native Mobile Dev
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== ACHIEVEMENTS =================== -->
+        <section id="achievements" class="section" aria-label="Achievements and statistics">
+            <div class="container">
+                <div class="reveal" id="achievementsHeader">
+                    <span class="section-label">02 — Signal Strength</span>
+                    <h2 class="section-heading" style="margin-bottom: 48px;">In Numbers.</h2>
+                </div>
+
+                <div class="achievements-grid reveal reveal-delay-2" id="achievementsGrid" role="list">
+                    <div class="achievement-card" role="listitem">
+                        <div class="achievement-number" aria-label="10 plus projects built">
+                            <span class="counter" data-target="10">0</span><span class="suffix">+</span>
+                        </div>
+                        <div class="achievement-label">Projects Built</div>
+                        <div class="achievement-sub">From AI systems to mobile apps</div>
+                    </div>
+                    <div class="achievement-card" role="listitem">
+                        <div class="achievement-number" aria-label="500 plus commits">
+                            <span class="counter" data-target="500">0</span><span class="suffix">+</span>
+                        </div>
+                        <div class="achievement-label">GitHub Commits</div>
+                        <div class="achievement-sub">Across personal & org repos</div>
+                    </div>
+                    <div class="achievement-card" role="listitem">
+                        <div class="achievement-number" aria-label="10 apps shipped">
+                            <span class="counter" data-target="10">0</span><span class="suffix"></span>
+                        </div>
+                        <div class="achievement-label">Apps Shipped</div>
+                        <div class="achievement-sub">Flutter multi-app ZenithTheme suite</div>
+                    </div>
+                    <div class="achievement-card" role="listitem">
+                        <div class="achievement-number" aria-label="1 organization co-founded">
+                            <span class="counter" data-target="1">0</span><span class="suffix"></span>
+                        </div>
+                        <div class="achievement-label">Org Co-Founded</div>
+                        <div class="achievement-sub">Eozka (eozkull) — Engineering collective</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== SKILLS =================== -->
+        <section id="skills" class="section" aria-label="Technical skills">
+            <div class="container">
+                <div class="skills-header">
+                    <div class="reveal" id="skillsHeaderLeft">
+                        <span class="section-label">03 — The Arsenal</span>
+                        <h2 class="section-heading">What I Command.</h2>
+                    </div>
+                    <div class="reveal reveal-delay-2" id="skillsHeaderRight">
+                        <p class="section-subheading">
+                            Every tool mastered, every layer understood. From silicon to shader,
+                            from logic to layout — this is the full stack of what's possible.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="skills-grid">
+                    <!-- Code & Engineering -->
+                    <div class="skill-category reveal" id="skillCode">
+                        <div class="skill-cat-label">Code &amp; Engineering</div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Python</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.92"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.90"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Flutter / Dart</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.85"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Mathematics</span>
+                                <span class="skill-level">Strong</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.80"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Systems & AI -->
+                    <div class="skill-category reveal reveal-delay-2" id="skillSystems">
+                        <div class="skill-cat-label">Systems &amp; AI</div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Embedded AI</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.88"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Computer Vision</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.82"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Systems Architecture</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.91"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Cross-Platform Dev</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.87"></div></div>
+                        </div>
+                    </div>
+
+                    <!-- Design & Frontend -->
+                    <div class="skill-category reveal reveal-delay-3" id="skillDesign">
+                        <div class="skill-cat-label">Design &amp; Frontend</div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">CSS / DOM Engineering</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.93"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">WebGL &amp; Shaders</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.78"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">UI/UX Aesthetics</span>
+                                <span class="skill-level">Expert</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.90"></div></div>
+                        </div>
+
+                        <div class="skill-item">
+                            <div class="skill-item-header">
+                                <span class="skill-name">Design Systems</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" data-width="0.85"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== PROJECTS =================== -->
+        <section id="projects" class="section" aria-label="Projects showcase">
+            <div class="container">
+                <div class="projects-header">
+                    <div class="reveal" id="projectsHeaderLeft">
+                        <span class="section-label">04 — Realms</span>
+                        <h2 class="section-heading">What I've Released<br>Into the World.</h2>
+                    </div>
+                    <div class="reveal reveal-delay-2" id="projectsHeaderRight">
+                        <a href="https://github.com/Inkesk-Dozing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn btn-ghost"
+                           id="viewAllProjectsBtn">
+                            View All on GitHub
+                            <i class="fa-brands fa-github" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Featured Projects -->
+                <div class="projects-featured">
+                    <!-- N.A.V.R.A.A.H. -->
+                    <div class="project-card reveal" id="projNavraah">
+                        <div class="project-card-top">
+                            <span class="project-tag">Embedded AI</span>
+                            <a href="https://github.com/Inkesk-Dozing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link-icon"
+                               aria-label="View N.A.V.R.A.A.H. on GitHub">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <h3 class="project-name">N.A.V.R.A.A.H.</h3>
+                        <p class="project-desc">
+                            An advanced, embedded AI construct for spatial intelligence and real-time bounding box tracking.
+                            Engineered with threaded audio feedback and memory labeling for safety-critical environments.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-chip">Python</span>
+                            <span class="tech-chip">Computer Vision</span>
+                            <span class="tech-chip">Threading</span>
+                            <span class="tech-chip">Spatial AI</span>
+                        </div>
+                    </div>
+
+                    <!-- Eozka Organization -->
+                    <div class="project-card reveal reveal-delay-2" id="projEozka">
+                        <div class="project-card-top">
+                            <span class="project-tag">Organization</span>
+                            <a href="https://github.com/eozkull"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link-icon"
+                               aria-label="Explore Eozka organization on GitHub">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <h3 class="project-name">Eozka (eozkull)</h3>
+                        <p class="project-desc">
+                            A collaborative engineering organization co-founded with peers. Dedicated to pushing boundaries,
+                            building robust software modules, and delivering shared vision to reality through collective excellence.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-chip">Multi-Language</span>
+                            <span class="tech-chip">Architecture</span>
+                            <span class="tech-chip">Open Source</span>
+                        </div>
+                    </div>
+
+                    <!-- Multi-App Suite -->
+                    <div class="project-card reveal reveal-delay-3" id="projMultiApp">
+                        <div class="project-card-top">
+                            <span class="project-tag live">Deployed</span>
+                            <a href="https://github.com/Inkesk-Dozing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link-icon"
+                               aria-label="View Multi-App Suite on GitHub">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <h3 class="project-name">Multi-App Suite</h3>
+                        <p class="project-desc">
+                            A comprehensive suite of 10 fully functional, patent-grade mobile applications built in Flutter.
+                            Anchored by the unified ZenithTheme design system with cross-platform native execution.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-chip">Flutter</span>
+                            <span class="tech-chip">Dart</span>
+                            <span class="tech-chip">ZenithTheme</span>
+                            <span class="tech-chip">iOS &amp; Android</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Projects -->
+                <div class="projects-secondary">
+                    <div class="project-card reveal reveal-delay-1" id="projStress">
+                        <div class="project-card-top">
+                            <span class="project-tag">Tool</span>
+                            <a href="https://github.com/Inkesk-Dozing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link-icon"
+                               aria-label="View Stress Calculator on GitHub">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <h3 class="project-name">Stress Calculator</h3>
+                        <p class="project-desc">A specialized mathematical tool to assess and quantify systemic or individual stress metrics with precision.</p>
+                        <div class="project-tech">
+                            <span class="tech-chip">Python</span>
+                            <span class="tech-chip">Mathematics</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal reveal-delay-2" id="projNotes">
+                        <div class="project-card-top">
+                            <span class="project-tag live">Active</span>
+                            <a href="https://github.com/Inkesk-Dozing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="project-link-icon"
+                               aria-label="View College Notes on GitHub">
+                                <i class="fa-solid fa-arrow-up-right-from-square" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <h3 class="project-name">College Notes</h3>
+                        <p class="project-desc">A comprehensive, version-controlled repository of academic notes and references, maintaining continuous daily integrity.</p>
+                        <div class="project-tech">
+                            <span class="tech-chip">Git</span>
+                            <span class="tech-chip">Markdown</span>
+                        </div>
+                    </div>
+
+                    <div class="project-card reveal reveal-delay-3" id="projSubmergence">
+                        <div class="project-card-top">
+                            <span class="project-tag live">Live</span>
+                            <a href="#"
+                               class="project-link-icon"
+                               aria-label="This site — currently viewing">
+                                <i class="fa-solid fa-eye" aria-hidden="true"></i>
+                            </a>
+                        </div>
+                        <h3 class="project-name">The Submergence</h3>
+                        <p class="project-desc">This exact portfolio. An exploration of complex WebGL, spatial mathematics, premium UX abstraction, and the "Creatorless Creator" philosophy.</p>
+                        <div class="project-tech">
+                            <span class="tech-chip">WebGL</span>
+                            <span class="tech-chip">HTML/CSS/JS</span>
+                            <span class="tech-chip">Design Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== EXPERIENCE =================== -->
+        <section id="experience" class="section" aria-label="Experience and career timeline">
+            <div class="container">
+                <div class="reveal" id="experienceHeader">
+                    <span class="section-label">05 — The Ledger</span>
+                    <h2 class="section-heading" style="margin-bottom: 64px;">Where I've Been.<br>What I've Done.</h2>
+                </div>
+
+                <div class="experience-layout">
+                    <!-- Timeline -->
+                    <div class="experience-timeline reveal" id="experienceTimeline" aria-label="Career timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-period">2023 — Present</div>
+                            <div class="timeline-role">Founding Engineer</div>
+                            <div class="timeline-org">Eozka (eozkull) — Engineering Collective</div>
+                            <div class="timeline-body">
+                                Co-founded and actively lead engineering efforts across collaborative open-source
+                                initiatives. Responsible for architecture decisions, module design, and driving
+                                the organization's technical vision.
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-period">2022 — Present</div>
+                            <div class="timeline-role">Independent Systems Architect</div>
+                            <div class="timeline-org">Personal / Freelance Projects</div>
+                            <div class="timeline-body">
+                                Designed and shipped embedded AI systems (N.A.V.R.A.A.H.), a 10-app Flutter suite with a
+                                unified design system, WebGL portfolio experiences, and mathematical tooling.
+                            </div>
+                        </div>
+                        <div class="timeline-item" style="padding-bottom: 0;">
+                            <div class="timeline-period">Ongoing</div>
+                            <div class="timeline-role">Computer Science Student</div>
+                            <div class="timeline-org">Academic Research &amp; Engineering</div>
+                            <div class="timeline-body">
+                                Parallel academic track — maintaining rigorous version-controlled notes,
+                                applying mathematical theory to systems engineering, and continuously expanding
+                                the arsenal.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Stats -->
+                    <div class="exp-stats reveal reveal-delay-2" id="expStats" aria-label="Experience summary statistics">
+                        <div class="exp-stat-card">
+                            <div class="exp-stat-number">
+                                <span class="counter" data-target="3">0</span><span class="plus">+</span>
+                            </div>
+                            <div class="exp-stat-label">Years Active</div>
+                        </div>
+                        <div class="exp-stat-card">
+                            <div class="exp-stat-number">
+                                <span class="counter" data-target="10">0</span><span class="plus">+</span>
+                            </div>
+                            <div class="exp-stat-label">Repos Shipped</div>
+                        </div>
+                        <div class="exp-stat-card">
+                            <div class="exp-stat-number">
+                                <span class="counter" data-target="2">0</span>
+                            </div>
+                            <div class="exp-stat-label">Active Orgs</div>
+                        </div>
+                        <div class="exp-stat-card">
+                            <div class="exp-stat-number">
+                                <span class="counter" data-target="6">0</span><span class="plus">+</span>
+                            </div>
+                            <div class="exp-stat-label">Tech Stacks</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- =================== CONTACT =================== -->
+        <section id="contact" class="section" aria-label="Contact section">
+            <div class="container">
+                <div class="contact-inner">
+                    <div class="contact-left reveal" id="contactLeft">
+                        <span class="section-label">06 — Communion</span>
+                        <h2 class="section-heading">Let's Build<br>Something Real.</h2>
+                        <div class="contact-availability">
+                            <span class="avail-dot" aria-hidden="true"></span>
+                            Available for collaboration
+                        </div>
+                        <p class="section-subheading" style="margin-bottom: 40px;">
+                            Whether it's a system that needs rethinking, a product that needs personality,
+                            or an idea that needs someone who can execute — I'm listening.
+                        </p>
+
+                        <!-- Social Links -->
+                        <nav class="socials-cluster" aria-label="Social links">
+                            <a href="https://github.com/Inkesk-Dozing"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               id="socialGithub">
+                                <span class="social-link-icon gh-color" aria-hidden="true">
+                                    <i class="fa-brands fa-github"></i>
+                                </span>
+                                <span>
+                                    <div style="color: var(--text-primary); font-weight: 600; font-size: 0.88rem; font-family: var(--font-display);">GitHub</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-dim);">@Inkesk-Dozing</div>
+                                </span>
+                                <span class="social-link-arrow" aria-hidden="true">→</span>
+                            </a>
+
+                            <a href="https://github.com/eozkull"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               id="socialEozka">
+                                <span class="social-link-icon gh-color" aria-hidden="true">
+                                    <i class="fa-brands fa-github"></i>
+                                </span>
+                                <span>
+                                    <div style="color: var(--text-primary); font-weight: 600; font-size: 0.88rem; font-family: var(--font-display);">Eozka Organization</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-dim);">@eozkull</div>
+                                </span>
+                                <span class="social-link-arrow" aria-hidden="true">→</span>
+                            </a>
+
+                            <a href="https://www.linkedin.com/in/harsh-dev-jha-primus/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               id="socialLinkedin">
+                                <span class="social-link-icon li-color" aria-hidden="true">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </span>
+                                <span>
+                                    <div style="color: var(--text-primary); font-weight: 600; font-size: 0.88rem; font-family: var(--font-display);">LinkedIn</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-dim);">harsh-dev-jha-primus</div>
+                                </span>
+                                <span class="social-link-arrow" aria-hidden="true">→</span>
+                            </a>
+
+                            <a href="https://instagram.com/uff_thedifficulty/"
+                               target="_blank"
+                               rel="noopener noreferrer"
+                               class="social-link"
+                               id="socialInstagram">
+                                <span class="social-link-icon ig-color" aria-hidden="true">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </span>
+                                <span>
+                                    <div style="color: var(--text-primary); font-weight: 600; font-size: 0.88rem; font-family: var(--font-display);">Instagram</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-dim);">@uff_thedifficulty</div>
+                                </span>
+                                <span class="social-link-arrow" aria-hidden="true">→</span>
+                            </a>
+
+                            <a href="mailto:devvindj@gmail.com"
+                               class="social-link"
+                               id="socialEmail">
+                                <span class="social-link-icon em-color" aria-hidden="true">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </span>
+                                <span>
+                                    <div style="color: var(--text-primary); font-weight: 600; font-size: 0.88rem; font-family: var(--font-display);">Email</div>
+                                    <div style="font-size: 0.75rem; color: var(--text-dim);">devvindj@gmail.com</div>
+                                </span>
+                                <span class="social-link-arrow" aria-hidden="true">→</span>
+                            </a>
+                        </nav>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="reveal reveal-delay-2" id="contactRight">
+                        <form class="contact-form"
+                              id="contactForm"
+                              action="#"
+                              method="post"
+                              novalidate
+                              aria-label="Contact form">
+                            <div class="form-row">
+                                <div class="form-field">
+                                    <label for="contactName">Name</label>
+                                    <input type="text"
+                                           id="contactName"
+                                           name="name"
+                                           placeholder="Your name"
+                                           required
+                                           autocomplete="name"
+                                           maxlength="100"
+                                           aria-required="true">
+                                </div>
+                                <div class="form-field">
+                                    <label for="contactEmail">Email</label>
+                                    <input type="email"
+                                           id="contactEmail"
+                                           name="email"
+                                           placeholder="your@email.com"
+                                           required
+                                           autocomplete="email"
+                                           maxlength="254"
+                                           aria-required="true">
+                                </div>
+                            </div>
+                            <div class="form-field">
+                                <label for="contactSubject">Subject</label>
+                                <input type="text"
+                                       id="contactSubject"
+                                       name="subject"
+                                       placeholder="What's this about?"
+                                       required
+                                       maxlength="200"
+                                       aria-required="true">
+                            </div>
+                            <div class="form-field">
+                                <label for="contactMessage">Message</label>
+                                <textarea id="contactMessage"
+                                          name="message"
+                                          placeholder="Tell me what you're building, what you need, or just say hello..."
+                                          required
+                                          maxlength="2000"
+                                          rows="6"
+                                          aria-required="true"></textarea>
+                            </div>
+
+                            <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
+
+                            <button type="submit" class="btn btn-primary" id="formSubmitBtn" style="width: 100%; justify-content: center;">
+                                <span id="formBtnText">Send Message</span>
+                                <i class="fa-solid fa-paper-plane" id="formBtnIcon" aria-hidden="true"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- =================== FOOTER =================== -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-inner">
+                <div class="footer-brand">HDJ.</div>
+                <div class="footer-copy">
+                    THE UNCREATED SOURCE &nbsp;•&nbsp; HARSH DEV JHA &nbsp;•&nbsp;
+                    <span id="footerYear"></span>
+                </div>
+                <div class="footer-status">
+                    <span style="color: #4ADE80;font-size: 0.6rem;">●</span>
+                    All systems nominal
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script — nonce matches CSP -->
+    <script nonce="HDJ2024PRIMUS" src="script.js"></script>
+</body>
+
+</html>

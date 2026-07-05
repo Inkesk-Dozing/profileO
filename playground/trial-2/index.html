@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Harsh Dev Jha - Systems Architect and Software Engineer Portfolio. Exploring spatial AI models, performant backend suites, and advanced UX.">
+    <title>Harsh Dev Jha | Systems Architect & Developer Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Global CSS Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Deep Space WebGL Background Layers -->
+    <canvas id="glCanvas"></canvas>
+    <!-- Canvas Particle Background -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Custom Cursor Glow -->
+    <div id="cursorGlow"></div>
+
+    <!-- Navigation Header -->
+    <header class="header-container" id="navHeader">
+        <div class="nav-wrapper">
+            <a href="#Home" class="logo-brand">
+                <span class="logo-text">HDJ</span><span class="logo-dot">.</span>
+            </a>
+
+            <!-- Menu Navigation Links -->
+            <nav class="main-navigation" aria-label="Main Navigation">
+                <a href="#About" class="nav-link">Origin</a>
+                <a href="#Projects" class="nav-link">Entities</a>
+                <a href="#Skills" class="nav-link">Essence</a>
+                <a href="#Timeline" class="nav-link">Timeline</a>
+                <a href="#Contact" class="nav-link">Communion</a>
+            </nav>
+
+            <!-- Navigation Controls (Search & Theme) -->
+            <div class="nav-controls">
+                <div class="search-box">
+                    <input type="text" id="siteSearch" placeholder="Search portfolio..." aria-label="Search site">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                </div>
+                <button id="themeToggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon moon-icon"></i>
+                    <i class="fa-solid fa-sun sun-icon"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main id="mainContent">
+
+        <!-- Hero Section -->
+        <section id="Home" class="hero-section">
+            <canvas id="kineticGrid"></canvas>
+            <div class="hero-content reveal">
+                <div class="badge-glowing">SYSTEMS ARCHITECT & DEVELOPER</div>
+                <h1 class="hero-title">
+                    Harsh Dev Jha<span class="highlight-accent">.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Bridging complex low-level logic with state-of-the-art UI/UX execution. Dedicated to spatial AI models and robust software suites.
+                </p>
+                <div class="hero-ctas">
+                    <a href="#Projects" class="btn btn-primary">Explore Entities</a>
+                    <a href="#Contact" class="btn btn-secondary">Transmit Message</a>
+                </div>
+            </div>
+
+            <!-- Developer Terminal Mockup Dashboard -->
+            <div class="terminal-container reveal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title">hdj_systems_core.sh</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">guest@hdj:~$</span> <span class="terminal-input">init --profile</span>
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        Loading system modules... [OK]
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="term-cyan">SYSTEM ORIGIN:</span> CSE Core / Spatial AI Engineering
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="term-cyan">MAIN ORGANIZATIONS:</span> Founding member @ Eozka (eozkull)
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="term-cyan">ACTIVE PROJECTS:</span> N.A.V.R.A.A.H, Multi-App Suite (10 apps)
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="term-cyan">AFFILIATED INITIATIVES:</span> Inkesk-Dozing on GitHub
+                    </div>
+                    <div class="terminal-line">
+                        <span class="terminal-prompt">guest@hdj:~$</span> <span class="terminal-input">check --status</span>
+                    </div>
+                    <div class="terminal-line terminal-output">
+                        <span class="term-green">● ONLINE</span> - Listening for new architectural challenges.
+                    </div>
+                </div>
+            </div>
+            <a href="#About" class="scroll-down-indicator" aria-label="Scroll to About Section">
+                <span class="scroll-mouse"><span class="wheel"></span></span>
+            </a>
+        </section>
+
+        <!-- About Me Section (Origin) -->
+        <section id="About" class="section-container">
+            <h2 class="section-title reveal" data-text="ORIGIN">Origin</h2>
+            <div class="about-grid">
+                <div class="about-card reveal">
+                    <div class="profile-frame">
+                        <div class="profile-glow"></div>
+                        <!-- Canvas/Placeholder Profile Image with modern gradient -->
+                        <div class="profile-image-container">
+                            <div class="profile-fallback-gradient">
+                                <i class="fa-solid fa-microchip profile-icon"></i>
+                                <span class="profile-tag">HARSH DEV JHA</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stats-cluster">
+                        <div class="stat-item">
+                            <div class="stat-number">10+</div>
+                            <div class="stat-label">Apps Created</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">2+</div>
+                            <div class="stat-label">Organizations</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">24/7</div>
+                            <div class="stat-label">Active Coding</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-text-container reveal">
+                    <h3>Decoding Harsh Dev Jha</h3>
+                    <p class="paragraph">
+                        I am a Computer Science & Engineering student focused on structural code bases and system architectural optimization. I specialize in merging advanced algorithms with interactive, performant user interfaces.
+                    </p>
+                    <p class="paragraph">
+                        My development methodologies leverage low-level script efficiency with responsive design architectures. I lead technical components at <strong>Inkesk-Dozing</strong> and contribute to the founding architectures of the collaborative <strong>Eozka (eozkull)</strong> engineering organization.
+                    </p>
+                    <div class="affiliations-list">
+                        <a href="https://github.com/Inkesk-Dozing" target="_blank" class="affiliation-badge" rel="noopener noreferrer">
+                            <i class="fa-brands fa-github"></i> Inkesk-Dozing
+                        </a>
+                        <a href="https://github.com/eozkull" target="_blank" class="affiliation-badge" rel="noopener noreferrer">
+                            <i class="fa-solid fa-users"></i> Eozka Org
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section (Entities) -->
+        <section id="Projects" class="section-container">
+            <h2 class="section-title reveal" data-text="ENTITIES">Entities</h2>
+            <p class="section-subtitle reveal">A collection of systems, constructs, and interactive packages engineered under the main repositories.</p>
+
+            <div class="projects-grid">
+                <!-- Project 1: N.A.V.R.A.A.H -->
+                <div class="project-card reveal" data-tags="ai python spatial backend">
+                    <div class="project-header">
+                        <i class="fa-solid fa-eye-low-vision project-icon-type"></i>
+                        <span class="project-status">Active</span>
+                    </div>
+                    <h3 class="project-name">N.A.V.R.A.A.H.</h3>
+                    <p class="project-description">
+                        An advanced, embedded AI construct for spatial intelligence and real-time bounding box tracking. Features threaded audio feedback and localized memory labeling.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">AI Model</span>
+                        <span class="tag">Computer Vision</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Inkesk-Dozing" target="_blank" class="project-link-btn" rel="noopener noreferrer">
+                            Observe Repos <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Eozka (eozkull) -->
+                <div class="project-card reveal" data-tags="organization module collaborative system">
+                    <div class="project-header">
+                        <i class="fa-solid fa-server project-icon-type"></i>
+                        <span class="project-status">Collaborative</span>
+                    </div>
+                    <h3 class="project-name">Eozka (eozkull)</h3>
+                    <p class="project-description">
+                        Foundational architecture and shared development utilities constructed with peer engineers to enforce structural consistency across external modules.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Architecture</span>
+                        <span class="tag">Git Control</span>
+                        <span class="tag">Shared Core</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/eozkull" target="_blank" class="project-link-btn" rel="noopener noreferrer">
+                            Explore Org <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Multi-App Suite -->
+                <div class="project-card reveal" data-tags="mobile flutter dart design theme">
+                    <div class="project-header">
+                        <i class="fa-solid fa-mobile-screen project-icon-type"></i>
+                        <span class="project-status">Released</span>
+                    </div>
+                    <h3 class="project-name">Multi-App Suite</h3>
+                    <p class="project-description">
+                        10 fully functional, patent-grade applications built using Flutter and Dart, unified under a centralized global styling engine designated ZenithTheme.
+                    </p>
+                    <div class="project-tags">
+                        <span class="tag">Flutter</span>
+                        <span class="tag">ZenithTheme</span>
+                        <span class="tag">Cross-Platform</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Inkesk-Dozing" target="_blank" class="project-link-btn" rel="noopener noreferrer">
+                            View Architecture <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notable Works Slider/Carousel Section -->
+        <section id="NotableWorks" class="section-container bg-offset">
+            <h2 class="section-title reveal" data-text="NOTABLE WORKS">Notable Works</h2>
+            <div class="carousel-container reveal">
+                <div class="carousel-track" id="carouselTrack">
+                    <!-- Card A -->
+                    <div class="carousel-card" data-tags="utility mathematics calculations">
+                        <div class="carousel-card-icon"><i class="fa-solid fa-calculator"></i></div>
+                        <h4>Stress Calculator</h4>
+                        <p>A specialized tool to mathematically assess and quantify systemic or individual stress metrics.</p>
+                        <a href="https://github.com/Inkesk-Dozing" target="_blank" class="card-action-link" rel="noopener noreferrer">
+                            Inspect Work <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card B -->
+                    <div class="carousel-card" data-tags="academic markdown notes version">
+                        <div class="carousel-card-icon"><i class="fa-solid fa-book"></i></div>
+                        <h4>College Notes</h4>
+                        <p>A comprehensive, version-controlled repository of academic notes and references, updated with daily integrity checks.</p>
+                        <a href="https://github.com/Inkesk-Dozing" target="_blank" class="card-action-link" rel="noopener noreferrer">
+                            Inspect Work <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card C -->
+                    <div class="carousel-card" data-tags="libraries architecture module utils">
+                        <div class="carousel-card-icon"><i class="fa-solid fa-cubes"></i></div>
+                        <h4>Eozka Modules</h4>
+                        <p>Collaborative internal architectures and utility libraries built under the Eozkull organization flag.</p>
+                        <a href="https://github.com/eozkull" target="_blank" class="card-action-link" rel="noopener noreferrer">
+                            Inspect Work <i class="fa-solid fa-chevron-right"></i>
+                        </a>
+                    </div>
+                    <!-- Card D -->
+                    <div class="carousel-card" data-tags="web design interactive canvas">
+                        <div class="carousel-card-icon"><i class="fa-solid fa-circle-nodes"></i></div>
+                        <h4>The Submergence</h4>
+                        <p>This exact portfolio interface, demonstrating spatial web canvas particles, responsive grid systems, and glass aesthetics.</p>
+                        <span class="card-action-link-static">Active View</span>
+                    </div>
+                    <!-- Card E (Placeholder for future projects) -->
+                    <div class="carousel-card" data-tags="placeholder python rust AI system">
+                        <div class="carousel-card-icon"><i class="fa-solid fa-circle-plus"></i></div>
+                        <h4>Systems Integration Suite</h4>
+                        <p>Future telemetry and core execution pipeline, reserved for systems automation modules and device hooks.</p>
+                        <span class="card-action-link-static">Future Build</span>
+                    </div>
+                </div>
+                <!-- Controls -->
+                <div class="carousel-controls">
+                    <button class="carousel-control-btn btn-prev" aria-label="Previous card"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-control-btn btn-next" aria-label="Next card"><i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Skills Section (The Essence) -->
+        <section id="Skills" class="section-container">
+            <h2 class="section-title reveal" data-text="ESSENCE">Essence</h2>
+            <p class="section-subtitle reveal">Technical capabilities mapped by systemic levels and engineering execution.</p>
+
+            <div class="skills-grid reveal">
+                <!-- Languages Category -->
+                <div class="skills-card">
+                    <div class="skills-group-header">
+                        <i class="fa-solid fa-code skills-group-icon"></i>
+                        <h3>Logic Core</h3>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="python">
+                        <div class="skill-info">
+                            <span class="skill-name">Python <small>(Systems & Models)</small></span>
+                            <span class="skill-percentage">75%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="75%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="mathematics">
+                        <div class="skill-info">
+                            <span class="skill-name">Vector Mathematics & Matrix Logic</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="rust c++ placeholder">
+                        <div class="skill-info">
+                            <span class="skill-name">Rust / Systems C <small>(Future modules)</small></span>
+                            <span class="skill-percentage">35%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="35%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Arcana & Aesthetics -->
+                <div class="skills-card">
+                    <div class="skills-group-header">
+                        <i class="fa-solid fa-wand-magic-sparkles skills-group-icon"></i>
+                        <h3>Web Arcana</h3>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="html">
+                        <div class="skill-info">
+                            <span class="skill-name">Structural DOM (HTML5)</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="css">
+                        <div class="skill-info">
+                            <span class="skill-name">Aesthetics (CSS3 & Flex/Grid)</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="javascript">
+                        <div class="skill-info">
+                            <span class="skill-name">JS Logic & Canvas Physics</span>
+                            <span class="skill-percentage">70%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="70%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools & Frameworks -->
+                <div class="skills-card">
+                    <div class="skills-group-header">
+                        <i class="fa-solid fa-screwdriver-wrench skills-group-icon"></i>
+                        <h3>Frameworks & Utilities</h3>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="flutter">
+                        <div class="skill-info">
+                            <span class="skill-name">Flutter / Dart (Cross-Platform)</span>
+                            <span class="skill-percentage">80%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="80%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="git version control">
+                        <div class="skill-info">
+                            <span class="skill-name">Git & Version Integrity Control</span>
+                            <span class="skill-percentage">85%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="85%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar-wrapper" data-skill="embedded ai spatial">
+                        <div class="skill-info">
+                            <span class="skill-name">Embedded AI Inference & Pipelines</span>
+                            <span class="skill-percentage">60%</span>
+                        </div>
+                        <div class="skill-progress-track">
+                            <div class="skill-progress-bar" style="width: 0%" data-width="60%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Timeline Section -->
+        <section id="Timeline" class="section-container bg-offset">
+            <h2 class="section-title reveal" data-text="TIMELINE">Timeline</h2>
+            <p class="section-subtitle reveal">Chronological development milestones and academic integration.</p>
+
+            <div class="timeline-container-vertical reveal">
+                <!-- Milestone 1 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content-card">
+                        <span class="timeline-date">2025 - Present</span>
+                        <h4>CSE Undergraduate / Systems Integrator</h4>
+                        <p class="timeline-description">
+                            Strengthening core computer science, memory management, and graph routing paradigms. Driving code organization as a founding architect at the Eozka organization.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 2 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content-card">
+                        <span class="timeline-date">2024 - 2025</span>
+                        <h4>Flutter and Systems Specialist</h4>
+                        <p class="timeline-description">
+                            Engineered the Multi-App Suite consisting of 10 fully functional applications leveraging modular widgets, theme providers, and SQLite storage caches.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 3 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content-card">
+                        <span class="timeline-date">2023 - 2024</span>
+                        <h4>Spatial AI Constructor</h4>
+                        <p class="timeline-description">
+                            Researched embedded bounding-box spatial detection systems, leading to the creation of the N.A.V.R.A.A.H model prototype with real-time feedback audio streams.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Milestone 4 (Placeholder) -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="marker-dot"></div>
+                    </div>
+                    <div class="timeline-content-card">
+                        <span class="timeline-date">Future Milestones</span>
+                        <h4>Research Architect - Edge Neural Nets</h4>
+                        <p class="timeline-description">
+                            Targeting hardware-native compiler tools, tensor processing unit optimization, and distributed cluster operations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form Section (Communion) -->
+        <section id="Contact" class="section-container">
+            <h2 class="section-title reveal" data-text="COMMUNION">Communion</h2>
+            <div class="contact-grid">
+                <!-- Form Area -->
+                <div class="contact-form-container reveal">
+                    <form class="interactive-form" id="contactForm" novalidate>
+                        <div class="form-group-floating">
+                            <input type="text" id="formName" required placeholder=" ">
+                            <label for="formName">Identify (Your Name)</label>
+                            <span class="form-error-msg">Name is required to establish communion.</span>
+                        </div>
+                        <div class="form-group-floating">
+                            <input type="email" id="formEmail" required placeholder=" ">
+                            <label for="formEmail">Return Vector (Email)</label>
+                            <span class="form-error-msg">Provide a valid return vector vector address.</span>
+                        </div>
+                        <div class="form-group-floating">
+                            <textarea id="formMessage" required rows="4" placeholder=" "></textarea>
+                            <label for="formMessage">Transmit Intention (Your Message)</label>
+                            <span class="form-error-msg">Intention cannot be empty.</span>
+                        </div>
+                        <div class="form-buttons">
+                            <button type="submit" class="btn btn-primary btn-submit">
+                                <span class="btn-text">Send Message</span>
+                                <i class="fa-solid fa-paper-plane btn-icon"></i>
+                            </button>
+                            <button type="reset" class="btn btn-tertiary" id="formReset">Reset</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Info Cards / Social Icons -->
+                <div class="contact-social-container reveal">
+                    <h3>Synchronize Channels</h3>
+                    <p class="paragraph text-muted">
+                        Select a network interface to connect, view source codes, or review current repositories.
+                    </p>
+
+                    <div class="social-grid-cluster">
+                        <a href="https://www.github.com/Inkesk-Dozing/" target="_blank" class="social-tile-link" title="GitHub Profile" rel="noopener noreferrer">
+                            <div class="tile-icon"><i class="fa-brands fa-github"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-title">GitHub</span>
+                                <span class="tile-handle">@Inkesk-Dozing</span>
+                            </div>
+                        </a>
+                        <a href="https://www.github.com/eozkull/" target="_blank" class="social-tile-link" title="Eozka Github Org" rel="noopener noreferrer">
+                            <div class="tile-icon"><i class="fa-solid fa-users"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-title">Eozka Org</span>
+                                <span class="tile-handle">@eozkull</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/harsh-dev-jha-primus/" target="_blank" class="social-tile-link" title="LinkedIn Profile" rel="noopener noreferrer">
+                            <div class="tile-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-title">LinkedIn</span>
+                                <span class="tile-handle">harsh-dev-jha-primus</span>
+                            </div>
+                        </a>
+                        <a href="https://instagram.com/uff_thedifficulty/" target="_blank" class="social-tile-link" title="Instagram Profile" rel="noopener noreferrer">
+                            <div class="tile-icon"><i class="fa-brands fa-instagram"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-title">Instagram</span>
+                                <span class="tile-handle">uff_thedifficulty</span>
+                            </div>
+                        </a>
+                        <a href="mailto:devvindj@gmail.com" class="social-tile-link" title="Direct Email">
+                            <div class="tile-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div class="tile-info">
+                                <span class="tile-title">Email Direct</span>
+                                <span class="tile-handle">devvindj@gmail.com</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Harsh Dev Jha. All rights reserved.</p>
+            <p class="footer-philosophy">AS BELOW ONE ABOVE ALL</p>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Message -->
+    <div id="toastNotification" class="toast-card" role="alert" aria-live="assertive">
+        <div class="toast-body">
+            <i class="fa-solid fa-circle-check toast-icon"></i>
+            <span id="toastMessage">Transmission completed successfully.</span>
+        </div>
+    </div>
+
+    <!-- Scroll-to-Top Floating Button -->
+    <button id="backToTop" class="back-to-top-btn" aria-label="Scroll to Top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Application Javascript Logic -->
+    <script src="script.js"></script>
+</body>
+
+</html>

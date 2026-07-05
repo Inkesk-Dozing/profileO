@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The Wanderer — A 3D Story</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Inter:wght@300;400&display=swap');
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --gold: #c8a96e;
+      --cream: #f5f0e8;
+      --dark: #0a0806;
+    }
+
+    body {
+      background: var(--dark);
+      color: var(--cream);
+      font-family: 'Cormorant Garamond', serif;
+      overflow: hidden;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    #canvas-wrap {
+      position: fixed;
+      inset: 0;
+      z-index: 0;
+    }
+
+    canvas { display: block; }
+
+    /* ─── Overlay UI ─── */
+    #ui {
+      position: fixed;
+      inset: 0;
+      z-index: 10;
+      pointer-events: none;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 3rem;
+    }
+
+    /* title block */
+    #title-block {
+      text-align: center;
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+    #title-block .eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--gold);
+      opacity: 0.8;
+      margin-bottom: 0.6rem;
+    }
+    #title-block h1 {
+      font-size: clamp(2.4rem, 6vw, 5rem);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+      line-height: 1;
+      color: var(--cream);
+    }
+    #title-block .sub {
+      font-style: italic;
+      font-size: 1.1rem;
+      color: rgba(245,240,232,0.5);
+      margin-top: 0.5rem;
+    }
+
+    /* chapter text */
+    #chapter-wrap {
+      max-width: 560px;
+      margin: 0 auto;
+      text-align: center;
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    #chapter-num {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6rem;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.8rem;
+    }
+    #chapter-text {
+      font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+      font-weight: 300;
+      line-height: 1.7;
+      color: rgba(245,240,232,0.9);
+      font-style: italic;
+    }
+
+    /* bottom bar */
+    #bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      pointer-events: all;
+    }
+
+    /* progress dots */
+    #dots {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .dot {
+      width: 6px; height: 6px;
+      border-radius: 50%;
+      background: rgba(200,169,110,0.3);
+      transition: all 0.4s ease;
+    }
+    .dot.active {
+      background: var(--gold);
+      transform: scale(1.5);
+    }
+
+    /* next button */
+    #next-btn {
+      background: transparent;
+      border: 1px solid rgba(200,169,110,0.5);
+      color: var(--gold);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.65rem;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      padding: 0.7rem 2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      pointer-events: all;
+    }
+    #next-btn:hover {
+      background: rgba(200,169,110,0.12);
+      border-color: var(--gold);
+    }
+
+    /* vignette */
+    #vignette {
+      position: fixed;
+      inset: 0;
+      z-index: 5;
+      background: radial-gradient(ellipse at center, transparent 30%, rgba(0,0,0,0.75) 100%);
+      pointer-events: none;
+    }
+
+    /* fade overlay for transitions */
+    #fade {
+      position: fixed;
+      inset: 0;
+      z-index: 20;
+      background: var(--dark);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.5s ease;
+    }
+    #fade.active { opacity: 1; }
+
+    /* thin gold line */
+    .divider {
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin: 1rem auto;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+<div id="fade"></div>
+<div id="vignette"></div>
+
+<div id="canvas-wrap">
+  <canvas id="three-canvas"></canvas>
+</div>
+
+<div id="ui">
+  <div id="title-block">
+    <p class="eyebrow">An Interactive Tale</p>
+    <h1>The Wanderer</h1>
+    <div class="divider"></div>
+    <p class="sub">A journey through worlds unseen</p>
+  </div>
+
+  <div id="chapter-wrap">
+    <p id="chapter-num">Chapter I</p>
+    <p id="chapter-text">
+      At the edge of everything known, where the stars dissolve into silence,<br>
+      the wanderer took the first step into the void.
+    </p>
+  </div>
+
+  <div id="bottom">
+    <div id="dots">
+      <div class="dot active"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+    <button id="next-btn">Continue →</button>
+  </div>
+</div>
+
+<!-- Three.js via CDN -->
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+
+<script>
+// ─── Chapters ───────────────────────────────────────────────────────────────
+const chapters = [
+  {
+    num: "Chapter I",
+    text: "At the edge of everything known, where the stars dissolve into silence,<br>the wanderer took the first step into the void.",
+    color: 0x0a0510,
+    particleColor: 0x9b7fd4,
+    speed: 0.0004,
+    spread: 28,
+  },
+  {
+    num: "Chapter II",
+    text: "The ocean of light stretched infinite in every direction.<br>Each particle — a memory of someone who had dared to dream.",
+    color: 0x050a10,
+    particleColor: 0x4f9ecf,
+    speed: 0.0008,
+    spread: 40,
+  },
+  {
+    num: "Chapter III",
+    text: "Fire does not destroy — it transforms.<br>In the heart of the storm, the wanderer found stillness.",
+    color: 0x100805,
+    particleColor: 0xe07040,
+    speed: 0.0016,
+    spread: 22,
+  },
+  {
+    num: "Chapter IV",
+    text: "And then — silence. Perfect, golden, complete.<br>The wanderer understood: the journey was never about the destination.",
+    color: 0x080810,
+    particleColor: 0xc8a96e,
+    speed: 0.0006,
+    spread: 55,
+  },
+];
+
+let current = 0;
+let isTransitioning = false;
+
+// ─── Three.js Setup ─────────────────────────────────────────────────────────
+const canvas = document.getElementById('three-canvas');
+const renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: false });
+renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+renderer.setSize(window.innerWidth, window.innerHeight);
+
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 30;
+
+// ─── Particle System ────────────────────────────────────────────────────────
+const PARTICLE_COUNT = 6000;
+
+function buildParticles(ch) {
+  const geo = new THREE.BufferGeometry();
+  const positions = new Float32Array(PARTICLE_COUNT * 3);
+  const sizes = new Float32Array(PARTICLE_COUNT);
+  const s = ch.spread;
+
+  for (let i = 0; i < PARTICLE_COUNT; i++) {
+    // spherical distribution with bias toward center
+    const r = Math.pow(Math.random(), 0.5) * s;
+    const theta = Math.random() * Math.PI * 2;
+    const phi = Math.acos(2 * Math.random() - 1);
+    positions[i * 3]     = r * Math.sin(phi) * Math.cos(theta);
+    positions[i * 3 + 1] = r * Math.sin(phi) * Math.sin(theta);
+    positions[i * 3 + 2] = r * Math.cos(phi);
+    sizes[i] = Math.random() * 2.5 + 0.3;
+  }
+
+  geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+  geo.setAttribute('size', new THREE.BufferAttribute(sizes, 1));
+
+  const mat = new THREE.PointsMaterial({
+    color: ch.particleColor,
+    size: 0.12,
+    sizeAttenuation: true,
+    transparent: true,
+    opacity: 0.85,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false,
+  });
+
+  return new THREE.Points(geo, mat);
+}
+
+let particles = buildParticles(chapters[0]);
+scene.add(particles);
+
+// Nebula core glow
+const glowGeo = new THREE.SphereGeometry(3, 32, 32);
+const glowMat = new THREE.MeshBasicMaterial({
+  color: chapters[0].particleColor,
+  transparent: true,
+  opacity: 0.04,
+});
+const glowMesh = new THREE.Mesh(glowGeo, glowMat);
+scene.add(glowMesh);
+
+// ─── Background Color ────────────────────────────────────────────────────────
+scene.background = new THREE.Color(chapters[0].color);
+
+// ─── Mouse Parallax ─────────────────────────────────────────────────────────
+const mouse = { x: 0, y: 0 };
+window.addEventListener('mousemove', e => {
+  mouse.x = (e.clientX / window.innerWidth - 0.5) * 2;
+  mouse.y = (e.clientY / window.innerHeight - 0.5) * 2;
+});
+
+// ─── Animation Loop ──────────────────────────────────────────────────────────
+let clock = 0;
+function animate() {
+  requestAnimationFrame(animate);
+  clock += chapters[current].speed;
+
+  // Rotate particles
+  particles.rotation.y = clock;
+  particles.rotation.x = clock * 0.3 + mouse.y * 0.08;
+  particles.rotation.z = mouse.x * 0.06;
+
+  // Camera subtle drift
+  camera.position.x += (mouse.x * 2 - camera.position.x) * 0.04;
+  camera.position.y += (-mouse.y * 1.5 - camera.position.y) * 0.04;
+  camera.lookAt(0, 0, 0);
+
+  // Glow pulse
+  const pulse = Math.sin(Date.now() * 0.001) * 0.5 + 0.5;
+  glowMesh.material.opacity = 0.02 + pulse * 0.05;
+  glowMesh.scale.setScalar(1 + pulse * 0.1);
+
+  renderer.render(scene, camera);
+}
+animate();
+
+// ─── Chapter Transition ──────────────────────────────────────────────────────
+const fade = document.getElementById('fade');
+const chapterNum = document.getElementById('chapter-num');
+const chapterText = document.getElementById('chapter-text');
+const titleBlock = document.getElementById('title-block');
+const dots = document.querySelectorAll('.dot');
+const nextBtn = document.getElementById('next-btn');
+
+function goToChapter(idx) {
+  if (isTransitioning) return;
+  isTransitioning = true;
+
+  // Fade out
+  fade.classList.add('active');
+
+  setTimeout(() => {
+    current = idx;
+    const ch = chapters[current];
+
+    // Swap particles
+    scene.remove(particles);
+    particles.geometry.dispose();
+    particles.material.dispose();
+    particles = buildParticles(ch);
+    scene.add(particles);
+
+    // Update scene
+    scene.background = new THREE.Color(ch.color);
+    glowMesh.material.color.set(ch.particleColor);
+
+    // Update text
+    chapterNum.textContent = ch.num;
+    chapterText.innerHTML = ch.text;
+
+    // Hide title after ch 0
+    titleBlock.style.opacity = current === 0 ? '1' : '0';
+    titleBlock.style.transform = current === 0 ? 'translateY(0)' : 'translateY(-20px)';
+
+    // Update dots
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+
+    // Update button
+    nextBtn.textContent = current < chapters.length - 1 ? 'Continue →' : 'Begin Again ↺';
+
+    // Fade back in
+    setTimeout(() => {
+      fade.classList.remove('active');
+      isTransitioning = false;
+    }, 100);
+  }, 500);
+}
+
+nextBtn.addEventListener('click', () => {
+  const next = (current + 1) % chapters.length;
+  goToChapter(next);
+});
+
+dots.forEach((dot, i) => {
+  dot.style.pointerEvents = 'all';
+  dot.style.cursor = 'pointer';
+  dot.addEventListener('click', () => goToChapter(i));
+});
+
+// ─── Resize ───────────────────────────────────────────────────────────────────
+window.addEventListener('resize', () => {
+  camera.aspect = window.innerWidth / window.innerHeight;
+  camera.updateProjectionMatrix();
+  renderer.setSize(window.innerWidth, window.innerHeight);
+});
+</script>
+</body>
+</html>

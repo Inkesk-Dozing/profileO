@@ -1,0 +1,214 @@
+/* Premium Dark Theme and Layout Settings */
+:root {
+    --bg-color: #040408;
+    --card-bg: rgba(10, 10, 18, 0.65);
+    --border-color: rgba(255, 255, 255, 0.08);
+    --text-primary: #ffffff;
+    --text-secondary: #a0a2b0;
+    --accent-color: #ffd700; /* Solar Golden sunrise accent */
+    --accent-glow: rgba(255, 215, 0, 0.15);
+    --font-sans: 'Outfit', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: var(--bg-color);
+    font-family: var(--font-sans);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Background Nebula Glow */
+body::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(200, 80, 50, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 20% 80%, rgba(100, 50, 200, 0.08) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* WebGL Canvas */
+#webgl-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 2;
+}
+
+/* Glassmorphic UI Card Overlay */
+#ui-card {
+    position: absolute;
+    left: 40px;
+    bottom: 40px;
+    width: 380px;
+    background: var(--card-bg);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    z-index: 10;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transform: translateY(0);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+#ui-card:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15),
+                0 0 20px rgba(255, 215, 0, 0.05);
+}
+
+/* Card Header */
+header {
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--accent-color);
+    border: 1px solid rgba(255, 215, 0, 0.3);
+    padding: 3px 8px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    background: rgba(255, 215, 0, 0.05);
+}
+
+h1 {
+    font-family: var(--font-serif);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 4px;
+}
+
+.subtitle {
+    font-size: 13px;
+    color: var(--text-secondary);
+    letter-spacing: 0.5px;
+}
+
+.divider {
+    height: 1px;
+    background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.12) 0%, transparent 100%);
+    margin: 20px 0;
+}
+
+/* Description Text */
+.description p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+    font-weight: 300;
+}
+
+/* Controls Legend */
+.controls-legend {
+    margin-top: 24px;
+}
+
+.controls-legend h3 {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: var(--text-secondary);
+    margin-bottom: 14px;
+}
+
+.controls-legend ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.controls-legend li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.key {
+    font-size: 11px;
+    font-weight: 600;
+    padding: 4px 10px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    color: #e0e0e8;
+}
+
+.label {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+/* Button & Footer styling */
+.footer {
+    margin-top: 28px;
+    display: flex;
+    justify-content: stretch;
+}
+
+#reset-btn {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-primary);
+    border-radius: 8px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+#reset-btn:hover {
+    background: var(--text-primary);
+    color: var(--bg-color);
+    border-color: var(--text-primary);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+#reset-btn:active {
+    transform: scale(0.98);
+}
+
+/* Responsive Overrides */
+@media (max-width: 580px) {
+    #ui-card {
+        left: 20px;
+        right: 20px;
+        bottom: 20px;
+        width: calc(100% - 40px);
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 26px;
+    }
+}

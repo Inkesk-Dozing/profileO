@@ -1,0 +1,488 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+::selection {
+  background: #000000;
+  color: #ff0000;
+}
+
+::-moz-selection {
+  background: #000000;
+  color: #ff0000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+#section-8, #section-8 * {
+  cursor: auto;
+}
+
+#cursor-text {
+  position: fixed;
+  left: -9999px;
+  top: -9999px;
+  pointer-events: none;
+  z-index: 9999;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 14px;
+  color: white;
+  letter-spacing: 3px;
+  transform: translate(10px, -50%);
+  will-change: transform;
+  white-space: nowrap;
+  opacity: 0;
+}
+
+html {
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  height: auto;
+  min-height: 100vh;
+  overflow-x: hidden;
+  scrollbar-width: none;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+
+#section-2 {
+  perspective: 900px;
+}
+
+#section-4 {
+  position: relative;
+  overflow: hidden;
+}
+
+#hero-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  will-change: opacity, transform;
+}
+
+#hero-canvas::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 10;
+  box-shadow: inset 0 0 60px 20px rgba(0,0,0,0.3);
+}
+
+.corner {
+  position: fixed;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(14px, 1.8vw, 28px);
+  color: white;
+  letter-spacing: 3px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+#top-left {
+  top: 5%;
+  left: 5%;
+}
+
+#top-right {
+  top: 5%;
+  right: 5%;
+}
+
+#bottom-left {
+  bottom: 6%;
+  left: 5%;
+}
+
+#bottom-right {
+  bottom: 6%;
+  right: 5%;
+}
+
+#section-2 {
+  position: fixed !important;
+  overflow: hidden;
+  will-change: opacity;
+  border-radius: none;
+}
+
+#section-2::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: none;
+  box-shadow: inset 0 0 60px 20px rgba(0,0,0,0.3);
+  pointer-events: none;
+  z-index: 300;
+}
+
+#wipe {
+  will-change: transform;
+}
+
+#s2-quote p {
+  will-change: opacity, transform;
+}
+
+#s2-prisoners img {
+  will-change: opacity, transform;
+}
+
+#section-3 {
+  background-image:
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.08'/%3E%3C/svg%3E"),
+    linear-gradient(135deg, #f0ebe0 0%, #e8e0d0 50%, #f0ebe0 100%);
+  background-size: 200px 200px, cover;
+  overflow: hidden;
+}
+
+#section-3::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 300;
+  box-shadow: inset 0 0 60px 20px rgba(0,0,0,0.25);
+}
+
+#section-3 .newspaper-left {
+  transform: rotate(-0.3deg);
+}
+
+#section-4 {
+  perspective: 900px;
+}
+
+#section-4::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 300;
+  box-shadow: inset 0 0 80px 30px rgba(0,0,0,0.4);
+}
+
+/* ── Section 6 cinematic ── */
+@keyframes s6-vignette-pulse {
+  0%, 100% { opacity: 0.55; }
+  50%       { opacity: 0.8;  }
+}
+
+#section-6::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 35%, rgba(0,0,0,0.75) 100%);
+  pointer-events: none;
+  z-index: 7;
+  animation: s6-vignette-pulse 4s ease-in-out infinite;
+}
+
+/* ── Section 3 photo hover ── */
+#s3-photo-wrap {
+  cursor: crosshair;
+}
+
+#s3-photo-wrap img {
+  transition: filter 1.4s ease, transform 1.8s ease;
+  transform-origin: center center;
+}
+
+#s3-photo-wrap:hover img {
+  filter: grayscale(15%) contrast(1.05) sepia(0.5) hue-rotate(320deg) brightness(0.75);
+  transform: scale(1.07);
+}
+
+#s3-photo-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0)    0px,
+    rgba(0,0,0,0)    2px,
+    rgba(0,0,0,0.13) 2px,
+    rgba(0,0,0,0.13) 4px
+  );
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
+#s3-photo-wrap:hover::before {
+  opacity: 1;
+}
+
+#s3-photo-wrap::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  background: radial-gradient(ellipse at center, rgba(160,0,0,0) 20%, rgba(160,0,0,0.35) 100%);
+  opacity: 0;
+  transition: opacity 1.2s ease;
+}
+
+#s3-photo-wrap:hover::after {
+  opacity: 1;
+}
+
+/* ── Redacted lines ── */
+@keyframes redact-wipe {
+  0%   { transform: scaleX(1);    opacity: 1; }
+  12%  { transform: scaleX(0.97); opacity: 0.6; }
+  22%  { transform: scaleX(1);    opacity: 1; }
+  34%  { transform: scaleX(0.93); opacity: 0.5; }
+  44%  { transform: scaleX(1);    opacity: 1; }
+  100% { transform: scaleX(0);    opacity: 1; }
+}
+
+@keyframes truth-appear {
+  from { opacity: 0; letter-spacing: 8px; filter: blur(6px); }
+  to   { opacity: 1; letter-spacing: 1px; filter: blur(0); }
+}
+
+.redacted-line.redacted {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.redacted-line.redacted::before {
+  content: '';
+  position: absolute;
+  inset: -1px -4px;
+  background: #1a1a1a;
+  transform-origin: left center;
+  border-radius: 2px;
+}
+
+.redacted-line.redacted::after {
+  content: attr(data-truth);
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  color: #cc0000;
+  font-weight: bold;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.redacted-line.redacted:hover::before {
+  animation: redact-wipe 0.75s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.redacted-line.redacted:hover::after {
+  animation: truth-appear 0.45s ease 0.6s forwards;
+}
+
+/* ── Section 7 cinematic idle ── */
+@keyframes s7-breathe {
+  0%, 100% { transform: translate(-50%, -50%) scale(1); }
+  50%       { transform: translate(-50%, -50%) scale(1.014); }
+}
+
+@keyframes s7-flicker {
+  0%, 88%, 100% { opacity: 1; }
+  90%           { opacity: 0.65; }
+  92%           { opacity: 1; }
+  95%           { opacity: 0.4; }
+  97%           { opacity: 1; }
+}
+
+#s7-cards-wrapper.s7-alive {
+  animation: s7-breathe 5s ease-in-out infinite;
+}
+
+#s7-math.s7-alive {
+  animation: s7-flicker 9s ease-in-out infinite;
+}
+
+/* ── Section 7 cards ── */
+.s7-card {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  will-change: transform;
+}
+
+.s7-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  mix-blend-mode: screen;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* ── Responsive: Tablet ── */
+@media (max-width: 1024px) {
+  #hero-canvas {
+    pointer-events: none;
+  }
+
+  /* Section 3: tighter padding */
+  .newspaper-left {
+    padding: 40px 24px !important;
+  }
+
+  /* Section 4: widen SVG */
+  #s4-woman {
+    width: 55% !important;
+  }
+
+  /* Section 6: keep side columns on tablet, slightly narrower */
+  #s6-left {
+    width: 20% !important;
+  }
+  #s6-right {
+    width: 20% !important;
+  }
+
+  /* Section 7: slightly smaller cards */
+  #s7-cards-wrapper {
+    width: 260px !important;
+    height: 360px !important;
+  }
+}
+
+/* ── Responsive: Mobile ── */
+@media (max-width: 768px) {
+
+  /* Hide mouse cursor label on touch devices */
+  #cursor-text {
+    display: none !important;
+  }
+
+  /* Corners: shrink all, show all */
+  .corner {
+    font-size: clamp(7px, 2.2vw, 12px) !important;
+    letter-spacing: 1px;
+  }
+
+  /* Section 2: stack vertically */
+  #section-2 {
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 15% 6% !important;
+    gap: 24px;
+  }
+  #s2-prisoners {
+    width: 75% !important;
+  }
+  #s2-quote {
+    width: 90% !important;
+  }
+  #s2-eye {
+    width: 70px !important;
+    height: 70px !important;
+    top: 3% !important;
+  }
+  #s2-eye > div {
+    width: 30px !important;
+    height: 30px !important;
+  }
+
+  /* Section 3: 100vh compact on mobile */
+  #section-3-inner {
+    flex-direction: column !important;
+    overflow: hidden !important;
+  }
+  .newspaper-left {
+    width: 100% !important;
+    padding: 10px 14px !important;
+    border-right: none !important;
+    border-bottom: 2px solid #1a1a1a;
+    flex: 1 !important;
+    min-height: 0 !important;
+    overflow: hidden !important;
+    justify-content: space-between !important;
+  }
+  #s3-photo-wrap {
+    width: 100% !important;
+    height: 44vh !important;
+    flex-shrink: 0 !important;
+  }
+  #s3-headline {
+    font-size: clamp(22px, 6vw, 36px) !important;
+    margin-bottom: 6px !important;
+    line-height: 0.88 !important;
+  }
+  .newspaper-left > div:nth-child(1),
+  .newspaper-left > div:nth-child(2) { font-size: 9px !important; letter-spacing: 1.5px !important; margin-bottom: 2px !important; }
+  .newspaper-left > div:nth-child(3) { margin-bottom: 4px !important; }
+  .newspaper-left > div:nth-child(4) { margin-bottom: 8px !important; font-size: 10px !important; letter-spacing: 1.5px !important; }
+  .newspaper-left > div:nth-child(6) { margin-bottom: 5px !important; }
+  .newspaper-left > div:nth-child(7) > div { font-size: 10px !important; line-height: 1.45 !important; }
+  .newspaper-left > div:nth-child(8) { display: none !important; }
+  .redacted-line { font-size: 10px !important; line-height: 1.45 !important; }
+
+  /* Section 4: widen SVG, adjust text */
+  #s4-woman {
+    width: 80% !important;
+  }
+  #s4-text {
+    font-size: clamp(16px, 4.5vw, 28px) !important;
+    padding: 10% 6% !important;
+    gap: 3vw 5vw !important;
+  }
+
+  /* Section 6: narrow side columns on mobile */
+  #s6-left {
+    width: 28% !important;
+    left: 1% !important;
+  }
+  #s6-right {
+    width: 28% !important;
+    right: 1% !important;
+  }
+  #s6-thoughtcrime {
+    padding: 0 30% !important;
+    text-align: center;
+  }
+
+  /* Section 7: scale down card stack */
+  #s7-cards-wrapper {
+    width: 190px !important;
+    height: 265px !important;
+  }
+  #s7-math {
+    font-size: clamp(44px, 14vw, 90px) !important;
+    letter-spacing: 4px !important;
+  }
+
+  /* Section 8: slightly smaller quote */
+  #s8-quote {
+    font-size: clamp(20px, 5.5vw, 40px) !important;
+  }
+
+  /* Loader title: tighten letter-spacing so it fits on narrow screens */
+  #loader-title {
+    letter-spacing: clamp(1px, 1.2vw, 4px) !important;
+    font-size: clamp(9px, 2.5vw, 14px) !important;
+    max-width: 90vw !important;
+    text-align: center;
+  }
+}

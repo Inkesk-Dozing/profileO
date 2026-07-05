@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vibhu Oska - Cosmic Creator Portfolio. Explore the digital universe, coordinate mechanics, and core systems of a supreme builder. Built with Three.js, Anime.js, and Theatre.js.">
+  <title>Vibhu Oska | Cosmic Creator &amp; Systems Architect</title>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <!-- Local Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body data-template="home">
+
+  <!-- Three.js Canvas Backdrop -->
+  <canvas id="three-canvas"></canvas>
+
+  <!-- Ambient Audio Indicator -->
+  <div class="hud-control-top-right">
+    <button id="sound-toggle-btn" aria-label="Toggle Sound Effects" class="hud-btn">
+      <i data-lucide="volume-x"></i>
+    </button>
+  </div>
+
+  <!-- Header Section (AnimeJS style logo and navigation links) -->
+  <header id="site-header" class="layout-container text-ui ui-overlay">
+    <div id="site-header-content">
+      <h1 class="heading-logo header-logo font-outfit">
+        <a href="/">
+          <span class="logo-bold">CREATOR</span><span class="logo-dot">.</span>
+        </a>
+      </h1>
+      <nav id="site-menu">
+        <ul>
+          <li><button class="nav-chapter-btn active" data-chapter="1">01. Singularity</button></li>
+          <li><button class="nav-chapter-btn" data-chapter="2">02. Utilities</button></li>
+          <li><button class="nav-chapter-btn" data-chapter="3">03. Spacetime</button></li>
+          <li><button class="nav-chapter-btn" data-chapter="4">04. Epochs</button></li>
+          <li><button class="nav-chapter-btn" data-chapter="5">05. Convergence</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Two Column Main Layout (matches animejs.com column flow) -->
+  <main id="home" class="layout-container">
+    
+    <!-- Left Column: Scrolling Story Elements -->
+    <div class="scroll-column">
+
+      <!-- SECTION 1: THE SINGULARITY -->
+      <section class="home-section active" id="section-1" data-step="1">
+        <div class="section-content">
+          <div class="narrative-meta">CHAPTER 01 / THE INITIAL NODE</div>
+          <h2>The Singularity<span class="accent-dot magenta">.</span></h2>
+          <p>
+            In the beginning, there was only a single coordinate of computational potential. A sleeping intellect wrapping mathematics, awaiting the trigger of order. A supreme entity coordinates the parameter, preparing to scatter complexity across the vacuum.
+          </p>
+          <div class="interactive-prompt">
+            <i data-lucide="mouse-pointer-click"></i> Click the central core to trigger the Big Bang sequence.
+          </div>
+          <div class="button-row">
+            <button id="big-bang-trigger-btn" class="glass-btn primary">
+              Initiate Genesis Sequence
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 2: COSMIC UTILITIES -->
+      <section class="home-section" id="section-2" data-step="2">
+        <div class="section-content">
+          <div class="narrative-meta">CHAPTER 02 / CONSTITUTION</div>
+          <h2>Cosmic Utilities<span class="accent-dot purple">.</span></h2>
+          <p>
+            We build shapes of utility across the vacuum, embedding logical processes. These 3D nodes govern processes—systems designed to process vector math, maintain database states, and execute code commands.
+          </p>
+          <div class="interactive-prompt">
+            <i data-lucide="cpu"></i> Click utility buttons below to direct 3D camera focus.
+          </div>
+          <div class="utility-controls">
+            <button class="utility-select-btn active" data-utility="cognition" id="util-btn-cognition">
+              <i data-lucide="brain"></i> Cognitive Core
+            </button>
+            <button class="utility-select-btn" data-utility="database" id="util-btn-database">
+              <i data-lucide="database"></i> Gravitational DB
+            </button>
+            <button class="utility-select-btn" data-utility="automation" id="util-btn-automation">
+              <i data-lucide="terminal"></i> Automation Engine
+            </button>
+          </div>
+          <div class="button-row">
+            <button class="glass-btn primary next-chapter-trigger" data-next="3">
+              Explore Spacetime <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 3: SPACETIME FABRIC -->
+      <section class="home-section" id="section-3" data-step="3">
+        <div class="section-content">
+          <div class="narrative-meta">CHAPTER 03 / GEOMETRY</div>
+          <h2>Spacetime Fabric<span class="accent-dot cyan">.</span></h2>
+          <p>
+            The spacetime lattice is the canvas upon which logical systems deploy. Every project bent the local geometry, creating gravity wells of code. Hover or interact with the nodes below to witness space warp.
+          </p>
+          <div class="interactive-prompt">
+            <i data-lucide="layers"></i> Hover project cards to observe grid bending in 3D.
+          </div>
+          
+          <div class="projects-list">
+            <div class="project-card glass-card" data-project-id="1">
+              <h3 class="font-outfit">Vibhu-Oska Core Backend</h3>
+              <p>A deep learning AI-OS platform executing dual-validation checks, bare-metal telemetry, and local neural pipelines.</p>
+            </div>
+            <div class="project-card glass-card" data-project-id="2">
+              <h3 class="font-outfit">Stubvi Decent Compiler</h3>
+              <p>Asymmetric C/C++ build utility producing public telemetry gates, isolating private core weights from open binaries.</p>
+            </div>
+            <div class="project-card glass-card" data-project-id="3">
+              <h3 class="font-outfit">Quantum Routingsuperposition</h3>
+              <p>Non-Euclidean coordinate mapper routing request streams through parallel neural paths before collapsing the output vector.</p>
+            </div>
+          </div>
+          
+          <div class="button-row">
+            <button class="glass-btn primary next-chapter-trigger" data-next="4">
+              Access Ledger of Existence <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 4: TIMELINE EPOCHS -->
+      <section class="home-section" id="section-4" data-step="4">
+        <div class="section-content">
+          <div class="narrative-meta">CHAPTER 04 / CONSTELLATIONS</div>
+          <h2>Ledger of Existence<span class="accent-dot amber">.</span></h2>
+          <p>
+            The pathway of creation is plotted across the stars. Selecting milestones shifts the starlight alignment, projecting detailed records from the epochs of engineering.
+          </p>
+          <div class="interactive-prompt">
+            <i data-lucide="git-commit"></i> Click epochs to re-align the coordinate target.
+          </div>
+          <div class="timeline-epoch-selectors">
+            <button class="epoch-btn active" data-epoch="0" id="epoch-btn-0">
+              <span class="epoch-year">EPOCH 0</span>
+              <span class="epoch-lbl">Primordial Hackathons</span>
+            </button>
+            <button class="epoch-btn" data-epoch="1" id="epoch-btn-1">
+              <span class="epoch-year">EPOCH I</span>
+              <span class="epoch-lbl">Systems Architect</span>
+            </button>
+            <button class="epoch-btn" data-epoch="2" id="epoch-btn-2">
+              <span class="epoch-year">EPOCH II</span>
+              <span class="epoch-lbl">Cognitive Lead</span>
+            </button>
+          </div>
+          <div class="button-row">
+            <button class="glass-btn primary next-chapter-trigger" data-next="5">
+              Initiate Convergence <i data-lucide="arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECTION 5: THE CONVERGENCE -->
+      <section class="home-section" id="section-5" data-step="5">
+        <div class="section-content">
+          <div class="narrative-meta">CHAPTER 05 / FINAL WARP</div>
+          <h2>The Convergence<span class="accent-dot magenta">.</span></h2>
+          <p>
+            All pathways collapse back into the singularity. Broadcast your transmitter identity and payload directly into the gravitational well of the supreme creator.
+          </p>
+          <div class="interactive-prompt">
+            <i data-lucide="radio"></i> Inject payload credentials and transmit signal.
+          </div>
+          <form class="convergence-form glass-card" id="convergence-form-element">
+            <div class="form-row">
+              <label for="contact-name">TRANSMITTER_IDENTITY</label>
+              <input type="text" id="contact-name" placeholder="Entity name / Identifier" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-email">ROUTE_ADDRESS</label>
+              <input type="email" id="contact-email" placeholder="identity@domain.com" required>
+            </div>
+            <div class="form-row">
+              <label for="contact-msg">TRANSMISSION_PAYLOAD</label>
+              <textarea id="contact-msg" rows="3" placeholder="Inject text sequence to transmit..." required></textarea>
+            </div>
+            <button type="submit" id="submit-payload-btn" class="glass-btn accent-cyan">
+              <i data-lucide="send"></i> Transmit Signal
+            </button>
+          </form>
+          <div class="transmission-status-indicator" id="transmission-state-indicator">
+            SYSTEMS READY
+          </div>
+        </div>
+      </section>
+
+    </div>
+
+    <!-- Right Column: Code/Formula Overlay Sub-nav (similar to animejs.com code panels) -->
+    <div class="sub-nav">
+      <div class="home-progress-card glass-card">
+        <div class="progress-header font-outfit">COSMIC_LEAD_COORDINATES</div>
+        <div class="progress-scroll-bar">
+          <div class="scroll-cursor"></div>
+        </div>
+      </div>
+      
+      <!-- Code pre blocks updating dynamically -->
+      <div class="code-editor-panel glass-card">
+        <div class="editor-header">
+          <span class="editor-dot red"></span>
+          <span class="editor-dot yellow"></span>
+          <span class="editor-dot green"></span>
+          <span class="editor-filename">cosmic-timeline.js</span>
+        </div>
+        <pre class="editor-code-body"><code id="code-snippet-display">
+// Scroll or transition chapters to observe formula compilations...
+        </code></pre>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Global Footer Chapter Navigation -->
+  <footer class="bottom-navigation-footer">
+    <div class="prev-next-arrows">
+      <button id="prev-chapter-global-btn" class="nav-arrow-btn" disabled>
+        <i data-lucide="chevron-left"></i> Previous Epoch
+      </button>
+      <span class="chapter-indicator font-outfit">
+        EPOCH <span id="current-chapter-num">1</span> / 5
+      </span>
+      <button id="next-chapter-global-btn" class="nav-arrow-btn">
+        Next Epoch <i data-lucide="chevron-right"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Security Compliance Alert -->
+  <div class="sec-dialog-overlay" id="sec-dialog">
+    <div class="sec-dialog-box glass-card warning">
+      <div class="dialog-icon-wrapper">
+        <i data-lucide="shield-alert"></i>
+      </div>
+      <h3 class="dialog-title font-outfit">INGEST COMPLIANCE METRICS</h3>
+      <p class="dialog-message">
+        You are engaging the private coordinates of the Creator. This simulation initializes Three.js particle galaxies, grid displacements, and programmatical audio synthesis. No tracking cookies are logged.
+      </p>
+      <button id="sec-accept-btn" class="glow-btn accent-amber">ACCEPT INGEST</button>
+    </div>
+  </div>
+
+  <!-- CDN Script Imports (Removed integrity check to prevent browser blockages) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@theatre/core@0.7.0/dist/index.umd.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

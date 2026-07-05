@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Terrain Displacement Visualizer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    
+    <!-- Import map to load Three.js and controls via CDN -->
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.161.0/build/three.module.js",
+          "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161.0/examples/jsm/"
+        }
+      }
+    </script>
+</head>
+<body>
+    <!-- WebGL Canvas Container -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Premium UI Controls Card -->
+    <div id="ui-card">
+        <header>
+            <span class="badge">3D Mesh Viewer</span>
+            <h1>Mountain Rhododendrons</h1>
+            <p class="subtitle">Real-Time GLB Model Rendering</p>
+            <p id="loading-status" style="font-size: 13px; color: #ffd700; margin-top: 10px; font-weight: 600; letter-spacing: 0.5px; transition: opacity 0.5s ease;">Status: Initializing Loader...</p>
+        </header>
+        
+        <div class="divider"></div>
+        
+        <section class="description">
+            <p>This scene loads the converted high-density 3D model (ImageToStl.com_1.glb) dynamically over WebGL, applying customized physical materials, light reflection parameters, and ambient sun particles.</p>
+        </section>
+        
+        <section class="controls-legend">
+            <h3>Interactive Navigation</h3>
+            <ul>
+                <li>
+                    <span class="key">Left Click + Drag</span>
+                    <span class="label">Rotate Camera</span>
+                </li>
+                <li>
+                    <span class="key">Scroll Wheel</span>
+                    <span class="label">Zoom In / Out</span>
+                </li>
+                <li>
+                    <span class="key">Right Click + Drag</span>
+                    <span class="label">Pan Scene</span>
+                </li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <button id="reset-btn">Reset Camera</button>
+        </footer>
+    </div>
+
+    <!-- Main Logic Script -->
+    <script type="module" src="index.js"></script>
+</body>
+</html>
