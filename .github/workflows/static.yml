@@ -1,5 +1,5 @@
 # Simple workflow for deploying static content to GitHub Pages
-name: Deploy skeleton.html to GitHub Pages
+name: Deploy static content to GitHub Pages
 
 on:
   push:
@@ -28,10 +28,11 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
-      - name: Prepare skeleton.html as index.html
+      - name: Prepare site directory
         run: |
           mkdir -p _site
-          cp skeleton.html _site/index.html
+          cp index.html _site/
+          cp -r static _site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
