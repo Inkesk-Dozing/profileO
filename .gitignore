@@ -2,6 +2,11 @@
 node_modules/
 jspm_packages/
 
+# Next.js build output
+.next/
+out/
+build/
+
 # IDE files
 .vscode/
 .idea/
@@ -30,3 +35,7 @@ logs/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Temporary / Scratch artifacts
+scratch/
+
