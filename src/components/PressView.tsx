@@ -1,6 +1,8 @@
 'use client';
 
-export default function PressView({ onClose }) {
+import Link from 'next/link';
+
+export default function PressView() {
   const pressItems = [
     {
       index: '01',
@@ -25,13 +27,13 @@ export default function PressView({ onClose }) {
   return (
     <div className="press-page">
       <nav className="view-nav view-nav--dark">
-        <a href="#archive" className="view-back" onClick={(e) => { e.preventDefault(); onClose(); }}>
+        <Link href="/archive" className="view-back">
           <span className="view-back__arrow">←</span>
           <span>Archive</span>
-        </a>
-        <a href="#archive" className="view-identity" onClick={(e) => { e.preventDefault(); onClose(); }}>
+        </Link>
+        <Link href="/archive" className="view-identity">
           Harsh Dev Jha
-        </a>
+        </Link>
         <div className="view-links">
           <a href="https://github.com/Inkesk-Dozing" target="_blank" rel="noreferrer">
             GitHub

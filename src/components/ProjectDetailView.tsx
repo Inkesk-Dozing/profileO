@@ -1,18 +1,33 @@
 'use client';
 
-export default function ProjectDetailView({ project, onClose }) {
-  if (!project) return null;
+import Link from 'next/link';
 
+interface ProjectDetailViewProps {
+  project: {
+    id: string;
+    title: string;
+    year: string;
+    category: string;
+    premise: string;
+    description?: string;
+    role?: string;
+    stack?: string;
+    image?: string;
+    link?: string;
+  };
+}
+
+export default function ProjectDetailView({ project }: ProjectDetailViewProps) {
   return (
     <div className="view-shell" style={{ visibility: 'visible', opacity: 1 }}>
       <nav className="view-nav view-nav--dark">
-        <a href="#archive" className="view-back" onClick={(e) => { e.preventDefault(); onClose(); }}>
+        <Link href="/archive" className="view-back">
           <span className="view-back__arrow">←</span>
           <span>Archive</span>
-        </a>
-        <a href="#archive" className="view-identity" onClick={(e) => { e.preventDefault(); onClose(); }}>
+        </Link>
+        <Link href="/archive" className="view-identity">
           Harsh Dev Jha
-        </a>
+        </Link>
       </nav>
 
       <main className="view-page">

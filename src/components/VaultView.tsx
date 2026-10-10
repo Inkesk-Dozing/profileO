@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 
-export default function VaultView({ onClose }) {
+export default function VaultView() {
   const [password, setPassword] = useState('');
   const [unlocked, setUnlocked] = useState(false);
   const [error, setError] = useState('');
 
-  const handleUnlock = (e) => {
+  const handleUnlock = (e: React.FormEvent) => {
     e.preventDefault();
     if (password.toLowerCase() === 'primus' || password.toLowerCase() === 'eozka' || password.toLowerCase() === 'inkesk') {
       setUnlocked(true);
@@ -20,13 +21,13 @@ export default function VaultView({ onClose }) {
   return (
     <div className="vault-page">
       <nav className="view-nav view-nav--dark">
-        <a href="#archive" className="view-back" onClick={(e) => { e.preventDefault(); onClose(); }}>
+        <Link href="/archive" className="view-back">
           <span className="view-back__arrow">←</span>
           <span>Archive</span>
-        </a>
-        <a href="#archive" className="view-identity" onClick={(e) => { e.preventDefault(); onClose(); }}>
+        </Link>
+        <Link href="/archive" className="view-identity">
           Harsh Dev Jha
-        </a>
+        </Link>
       </nav>
 
       <main className="view-page">

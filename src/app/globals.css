@@ -1,32 +1,6 @@
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
-
-@font-face {
-    font-family: Heros;
-    src: url(/fonts/heros-condensed-regular.woff2) format("woff2"), url(/fonts/heros-condensed-regular.woff) format("woff");
-    font-display: swap
-}
-
-@font-face {
-    font-family: Heros;
-    src: url(/fonts/heros-condensed-bold.woff2) format("woff2"), url(/fonts/heros-condensed-bold.woff) format("woff");
-    font-weight: 700;
-    font-display: swap
-}
-
-@font-face {
-    font-family: Junicode;
-    src: url(/fonts/junicode-condensed-regular.woff2) format("woff2"), url(/fonts/junicode-condensed-regular.woff) format("woff");
-    font-display: swap
-}
-
-@font-face {
-    font-family: Junicode;
-    src: url(/fonts/junicode-condensed-bold.woff2) format("woff2"), url(/fonts/junicode-condensed-bold.woff) format("woff");
-    font-weight: 700;
-    font-display: swap
-}
-
 :root {
+    --font-sans: 'Space Grotesk', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-serif: 'Crimson Pro', Georgia, Cambria, 'Times New Roman', serif;
     --archive-black: #050505;
     --paper: #f0efe9;
     --page-grey: #c9c8c3;
@@ -59,7 +33,7 @@ html {
 body {
     background: var(--archive-black);
     color: var(--paper);
-    font-family: Heros, Arial Narrow, sans-serif;
+    font-family: var(--font-sans);
     overscroll-behavior: none
 }
 
@@ -85,6 +59,37 @@ img {
 ::selection {
     background: var(--hard-ink);
     color: var(--paper)
+}
+
+.dust-canvas-container {
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.dust-canvas-webgl {
+    position: fixed;
+    inset: 0;
+    z-index: -10;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    box-shadow: inset 0 0 300px rgba(0, 0, 0, 1);
+}
+
+.dust-canvas-particles {
+    position: fixed;
+    inset: 0;
+    z-index: -5;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+}
+
+.dark-page .dust-canvas-container {
+    z-index: -1;
 }
 
 .no-js {
@@ -540,7 +545,7 @@ img {
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    font: 400 clamp(78px, 15.2vw, 230px)/.72 "Junicode", Georgia, serif;
+    font: 400 clamp(78px, 15.2vw, 230px)/.72 var(--font-serif);
     letter-spacing: -.06em;
     text-transform: none;
     white-space: nowrap
@@ -729,7 +734,7 @@ img {
     margin: 8vh 0 0;
     overflow: hidden;
     padding: .3em 0;
-    font: 400 clamp(92px, 15.7vw, 224px)/.9 "Junicode", Georgia, serif;
+    font: 400 clamp(92px, 15.7vw, 224px)/.9 var(--font-serif);
     letter-spacing: -.055em;
     text-wrap: balance
 }
@@ -847,12 +852,12 @@ img {
 }
 
 .story-block h2 {
-    font: 400 16px/1 Heros, sans-serif
+    font: 400 16px/1 var(--font-sans)
 }
 
 .story-block p {
     max-width: 58ch;
-    font: 400 clamp(20px, 1.9vw, 27px)/1.45 "Junicode", Georgia, serif;
+    font: 400 clamp(20px, 1.9vw, 27px)/1.45 var(--font-serif);
     letter-spacing: -.006em;
     white-space: pre-line;
     text-wrap: pretty
@@ -971,7 +976,7 @@ img {
 }
 
 .next-project strong {
-    font: 400 clamp(66px, 9.2vw, 140px)/.78 "Junicode", Georgia, serif;
+    font: 400 clamp(66px, 9.2vw, 140px)/.78 var(--font-serif);
     letter-spacing: -.045em
 }
 
@@ -1004,7 +1009,7 @@ img {
     align-items: end;
     padding: 30px 0 12px;
     color: inherit;
-    font: 400 clamp(72px, 11.2vw, 170px)/.74 "Junicode", Georgia, serif;
+    font: 400 clamp(72px, 11.2vw, 170px)/.74 var(--font-serif);
     letter-spacing: -.05em;
     text-decoration: none
 }
@@ -1025,6 +1030,12 @@ img {
 
 .about-page,
 .press-page {
+    min-height: 100%;
+    background: var(--archive-black);
+    color: var(--paper)
+}
+
+.experience-page {
     min-height: 100%;
     background: var(--archive-black);
     color: var(--paper)
@@ -1074,7 +1085,7 @@ img {
 .press-item__title {
     display: block;
     max-width: 56ch;
-    font: 400 clamp(21px, 2.3vw, 30px)/1.22 "Junicode", Georgia, serif;
+    font: 400 clamp(21px, 2.3vw, 30px)/1.22 var(--font-serif);
     letter-spacing: -.012em;
     text-wrap: pretty;
     transition: opacity .2s ease
@@ -1141,7 +1152,7 @@ img {
     margin: -.34em 0 0;
     overflow: hidden;
     padding: .34em 0;
-    font: 400 clamp(112px, 16.6vw, 248px)/.78 "Junicode", Georgia, serif;
+    font: 400 clamp(112px, 16.6vw, 248px)/.78 var(--font-serif);
     letter-spacing: -.07em
 }
 
@@ -1182,7 +1193,7 @@ img {
     max-width: 62ch;
     margin: 0 0 26px;
     color: #d2d1ca;
-    font: 400 22px/1.52 Junicode, Georgia, serif;
+    font: 400 22px/1.52 var(--font-serif);
     letter-spacing: .002em;
     text-wrap: pretty
 }
@@ -1191,7 +1202,7 @@ img {
     max-width: 46ch;
     margin-bottom: 84px;
     color: var(--paper);
-    font: 400 clamp(27px, 3.1vw, 42px)/1.16 "Junicode", Georgia, serif;
+    font: 400 clamp(27px, 3.1vw, 42px)/1.16 var(--font-serif);
     letter-spacing: -.018em;
     text-wrap: pretty
 }
@@ -1446,7 +1457,7 @@ img {
 
     .project-hero__premise {
         max-width: 18ch;
-        font: 400 29px/.98 Junicode, Georgia, serif
+        font: 400 29px/.98 var(--font-serif);
     }
 
     .project-facts {
@@ -1758,7 +1769,7 @@ img {
 
 .awards-count {
     margin-top: .06em;
-    font: 400 clamp(76px, 9vw, 150px)/.8 "Junicode", Georgia, serif;
+    font: 400 clamp(76px, 9vw, 150px)/.8 var(--font-serif);
     letter-spacing: -.05em;
     font-variant-numeric: tabular-nums
 }
@@ -1839,6 +1850,24 @@ html.js .project-hero__premise,
     color: var(--paper)
 }
 
+/* Dark page overrides for dust canvas visibility */
+.dark-page .about-page,
+.dark-page .awards-page,
+.dark-page .press-page,
+.dark-page .vault-page {
+    background: transparent;
+}
+
+.dark-page .view-page {
+    background: transparent;
+}
+
+body:has(.dark-page),
+html:has(.dark-page),
+.dark-page {
+    background: transparent;
+}
+
 .vault-hero {
     display: grid;
     gap: 26px;
@@ -1857,7 +1886,7 @@ html.js .project-hero__premise,
     margin: -.3em 0 0;
     overflow: hidden;
     padding: .3em 0;
-    font: 400 clamp(72px, 12.5vw, 196px)/.8 "Junicode", Georgia, serif;
+    font: 400 clamp(72px, 12.5vw, 196px)/.8 var(--font-serif);
     letter-spacing: -.06em
 }
 
@@ -1955,7 +1984,7 @@ html.js .project-hero__premise,
 }
 
 .vault-list a strong {
-    font: 400 clamp(22px, 2.6vw, 34px)/1.08 "Junicode", Georgia, serif;
+    font: 400 clamp(22px, 2.6vw, 34px)/1.08 var(--font-serif);
     letter-spacing: -.02em
 }
 
@@ -2037,7 +2066,7 @@ html.js .project-hero__premise,
     margin: -.3em 0 0;
     overflow: hidden;
     padding: .3em 0;
-    font: 400 clamp(72px, 12.5vw, 196px)/.8 "Junicode", Georgia, serif;
+    font: 400 clamp(72px, 12.5vw, 196px)/.8 var(--font-serif);
     letter-spacing: -.06em
 }
 
@@ -2077,7 +2106,7 @@ html.js .project-hero__premise,
 }
 
 .awards-tally__list b {
-    font: 400 clamp(46px, 6vw, 88px)/.86 "Junicode", Georgia, serif;
+    font: 400 clamp(46px, 6vw, 88px)/.86 var(--font-serif);
     letter-spacing: -.04em
 }
 
@@ -2140,14 +2169,14 @@ html.js .project-hero__premise,
 }
 
 .ranking-list b {
-    font: 400 clamp(30px, 3.4vw, 48px)/.9 "Junicode", Georgia, serif;
+    font: 400 clamp(30px, 3.4vw, 48px)/.9 var(--font-serif);
     font-weight: 400;
     letter-spacing: -.03em
 }
 
 .ranking-list__title {
     max-width: 40ch;
-    font: 400 clamp(19px, 2vw, 26px)/1.2 "Junicode", Georgia, serif;
+    font: 400 clamp(19px, 2vw, 26px)/1.2 var(--font-serif);
     letter-spacing: -.012em;
     text-wrap: pretty
 }
@@ -2183,13 +2212,13 @@ html.js .project-hero__premise,
     margin: 0 0 4px;
     padding-bottom: 10px;
     border-bottom: 1px solid var(--rule-light);
-    font: 400 clamp(21px, 2.4vw, 30px)/1.1 "Junicode", Georgia, serif;
+    font: 400 clamp(21px, 2.4vw, 30px)/1.1 var(--font-serif);
     letter-spacing: -.018em
 }
 
 .award-show__name span {
     color: var(--graphite);
-    font: 400 12px/1 Heros, sans-serif;
+    font: 400 12px/1 var(--font-sans);
     letter-spacing: .16em
 }
 
@@ -2388,41 +2417,4 @@ html.js .project-hero__premise,
     .view-links {
         gap: 10px
     }
-}
-
-/* ==========================================================================
-   CANVAS Z-INDEX & BACKGROUND LAYER DEFINITIONS
-   ========================================================================== */
-#glCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 0;
-    opacity: 0.85;
-    display: block;
-}
-
-#dustCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    pointer-events: none;
-    z-index: 8400;
-    opacity: 1;
-    display: block;
-}
-
-.view-shell {
-    background: rgba(5, 5, 5, 0.72) !important;
-    backdrop-filter: blur(8px) !important;
-    -webkit-backdrop-filter: blur(8px) !important;
-}
-
-.view-page {
-    background: transparent !important;
 }
